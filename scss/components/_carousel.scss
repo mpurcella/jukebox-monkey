@@ -1,0 +1,135 @@
+.hero {
+	.carousel {
+		.carousel-item {
+			transition: transform 0.4s ease-in-out;
+
+			img {
+				opacity: 0.8;
+			}
+		}
+
+		&-control-prev,
+		&-control-next {
+			width: 3%;
+		}
+	}
+}
+
+.product-carousel {
+	.carousel-item {
+		.card-img-overlay {
+			background-color: rgba(0, 0, 0, 0.7);
+			color: #fff;
+			opacity: 0;
+
+			&:hover {
+				opacity: 1;
+
+				.carousel-album {
+					font-family: 'Oxanium', cursive;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 767px) {
+		.carousel-inner .carousel-item > div {
+			display: none;
+		}
+
+		.carousel-inner .carousel-item > div:first-child {
+			display: block;
+		}
+	}
+
+	.carousel-inner .carousel-item.active,
+	.carousel-inner .carousel-item-next,
+	.carousel-inner .carousel-item-prev {
+		display: flex;
+	}
+
+	/* medium and up screens */
+	@media (min-width: 768px) {
+		.carousel-inner .carousel-item-end.active,
+		.carousel-inner .carousel-item-next {
+			transform: translateX(20%);
+		}
+
+		.carousel-inner .carousel-item-start.active,
+		.carousel-inner .carousel-item-prev {
+			transform: translateX(-20%);
+		}
+	}
+
+	.carousel-inner .carousel-item-end,
+	.carousel-inner .carousel-item-start {
+		transform: translateX(0);
+	}
+
+	.carousel-control-prev,
+	.carousel-control-next {
+		width: 25px;
+		opacity: 1;
+	}
+}
+
+.videos-carousel {
+	.play-btn {
+		z-index: 20;
+	}
+
+	.card-img-overlay {
+		background-color: rgba(0, 0, 0, 0.7);
+		color: #fff;
+		opacity: 0;
+
+		&:hover {
+			opacity: 1;
+
+			.carousel-song {
+				font-family: 'Oxanium';
+			}
+		}
+	}
+
+	@media (max-width: 767px) {
+		.carousel-inner .carousel-item > div {
+			display: none;
+		}
+
+		.carousel-inner .carousel-item > div:first-child {
+			display: block;
+		}
+	}
+
+	.carousel-inner .carousel-item.active,
+	.carousel-inner .carousel-item-next,
+	.carousel-inner .carousel-item-prev {
+		display: flex;
+	}
+
+	/* medium and up screens */
+	@media (min-width: 768px) {
+		.carousel-inner .carousel-item-end.active,
+		.carousel-inner .carousel-item-next {
+			transform: translateX(50%);
+		}
+
+		.carousel-inner .carousel-item-start.active,
+		.carousel-inner .carousel-item-prev {
+			transform: translateX(-50%);
+		}
+	}
+
+	.carousel-inner .carousel-item-end,
+	.carousel-inner .carousel-item-start {
+		transform: translateX(0);
+	}
+
+	.carousel-control-prev,
+	.carousel-control-next {
+		width: 25px;
+		opacity: 1;
+	}
+}

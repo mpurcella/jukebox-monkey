@@ -1,0 +1,21 @@
+#contactModal,
+#demoModal,
+#streetTeamModal {
+	.modal-header {
+		display: block;
+
+		.contact-header,
+		.demo-header,
+		.street-team-header {
+			font-family: 'Oxanium', cursive;
+			font-size: 40px;
+			font-weight: 900;
+		}
+
+		.btn-close {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+.search-container {
+	width: 21px;
+	transition: width 0.4s;
+
+	&:hover {
+		width: 200px;
+	}
+
+	.search-form-input {
+		width: 200px;
+		outline: none;
+	}
+
+	.search-form-icon {
+		transform: translateY(-50%);
+		width: 20px;
+		height: 100%;
+		background-color: $secondary-color;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}

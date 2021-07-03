@@ -1,0 +1,18 @@
+.hero {
+	&-artist {
+		font-size: 50px;
+	}
+
+	&-album {
+		font-family: 'Oxanium', cursive;
+		font-size: 40px;
+
+		&-date {
+			font-size: 14px;
+		}
+	}
+
+	&-album-art {
+		width: 150px;
+	}
+}
