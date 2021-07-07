@@ -32,11 +32,11 @@ $(document).ready(function () {
 	});
 
 	// Modal Video Player - BMTH
-	$('#vidBMTH').click(function () {
+	$('#playBMTH').click(function () {
 		$('#modalVideoBMTH').modal('show');
 	});
 
-	$('#modalVideoBMTH').on('hide.bs.modal', function () {
-		$('#vidBMTHFrame').attr('src', $('#vidBMTHFrame').attr('src'));
+	$('#modalVideoBMTH').on('hidden.bs.modal', function (e) {
+		$('#modalVideoBMTH iframe').attr('src', $('#modalVideoBMTH iframe').attr('src'));
 	});
 });
