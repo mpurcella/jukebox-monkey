@@ -2006,26 +2006,24 @@
 			aria-hidden="true"
 		>
 			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"
-						></button>
-					</div>
-					<div class="modal-body">
-						<iframe
-							id="vidBMTHFrame"
-							src="https://www.youtube.com/embed/B9wvTuDC-H0"
-							width="760"
-							height="360"
-							frameborder="0"
-							webkitallowfullscreen
-							mozallowfullscreen
-							allowfullscreen
-						></iframe>
+				<div class="modal-content position-relative">
+					<button
+						type="button"
+						class="btn-close position-absolute fs-5 outline-0"
+						data-bs-dismiss="modal"
+						aria-label="Close"
+					></button>
+					<div class="modal-body p-0">
+						<div class="ratio ratio-16x9">
+							<iframe
+								id="vidBMTHFrame"
+								src="https://www.youtube.com/embed/B9wvTuDC-H0"
+								frameborder="0"
+								webkitallowfullscreen
+								mozallowfullscreen
+								allowfullscreen
+							></iframe>
+						</div>
 					</div>
 				</div>
 			</div>

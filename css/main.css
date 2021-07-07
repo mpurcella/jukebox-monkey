@@ -284,23 +284,10 @@ table {
   right: 10px;
 }
 
-#videoModalBMTH .modal-dialog {
-  max-width: 800px;
-  margin: 30px auto;
-}
-#videoModalBMTH .modal-dialog .modal-body {
-  position: relative;
-  padding: 0px;
-}
-#videoModalBMTH .modal-dialog .modal-body .close {
-  position: absolute;
-  right: -30px;
+#modalVideoBMTH .btn-close {
+  z-index: 10;
   top: 0;
-  z-index: 999;
-  font-size: 2rem;
-  font-weight: normal;
-  color: #fff;
-  opacity: 1;
+  right: 0;
 }
 
 .search-container {

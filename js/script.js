@@ -37,6 +37,6 @@ $(document).ready(function () {
 	});
 
 	$('#modalVideoBMTH').on('hide.bs.modal', function () {
-		$('#vidBMTHFrame').attr('src', $('#video101').attr('src'));
+		$('#vidBMTHFrame').attr('src', $('#vidBMTHFrame').attr('src'));
 	});
 });
