@@ -34,7 +34,7 @@ $(document).ready(function () {
 	// Modal Video Player - BMTH
 
 	let $videoSrc;
-	$('.video-container').click(function () {
+	$('.card').click(function () {
 		$videoSrc = $(this).attr('data-tagVideo');
 	});
 	console.log($videoSrc);
