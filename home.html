@@ -11,6 +11,7 @@
 			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 			crossorigin="anonymous"
 		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<link rel="stylesheet" href="css/main.css" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
@@ -768,10 +769,11 @@
 										<div class="col card-container mx-2">
 											<div class="card border-0 rounded-0">
 												<div class="card-img rounded-0">
-													<a
-														href="#"
+													<div
+														class="video-container"
 														data-bs-toggle="modal"
-														data-bs-target="#videoModal"
+														data-src="https://youtu.be/B9wvTuDC-H0"
+														data-bs-target="#videoModalBMTH"
 													>
 														<div
 															class="
@@ -788,7 +790,7 @@
 																	border border-1 border-dark
 																"
 															/>
-															<i
+															<!-- <i
 																class="
 																	far
 																	fa-play-circle
@@ -797,7 +799,7 @@
 																	text-light
 																	play-btn
 																"
-															></i>
+															></i> -->
 														</div>
 														<div
 															class="
@@ -831,7 +833,7 @@
 																Ludens
 															</p>
 														</div>
-													</a>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -840,9 +842,13 @@
 										<div class="col card-container mx-2">
 											<div class="card border-0 rounded-0">
 												<div class="card-img rounded-0">
-													<a href="#">
+													<div class="video">
 														<div class="card-img rounded-0">
-															<a href="#">
+															<a
+																href="#"
+																data-bs-toggle="modal"
+																data-bs-target="#videoModalTGI"
+															>
 																<div
 																	class="
 																		position-relative
@@ -907,7 +913,7 @@
 																</div>
 															</a>
 														</div>
-													</a>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -916,9 +922,13 @@
 										<div class="col card-container mx-2">
 											<div class="card border-0 rounded-0">
 												<div class="card-img rounded-0">
-													<a href="#">
+													<div class="video">
 														<div class="card-img rounded-0">
-															<a href="#">
+															<a
+																href="#"
+																data-bs-toggle="modal"
+																data-bs-target="#videoModalTAS"
+															>
 																<div
 																	class="
 																		position-relative
@@ -983,7 +993,7 @@
 																</div>
 															</a>
 														</div>
-													</a>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -992,9 +1002,13 @@
 										<div class="col card-container mx-2">
 											<div class="card border-0 rounded-0">
 												<div class="card-img rounded-0">
-													<a href="#">
+													<div class="video">
 														<div class="card-img rounded-0">
-															<a href="#">
+															<a
+																href="#"
+																data-bs-toggle="modal"
+																data-bs-target="#videoModalBO"
+															>
 																<div
 																	class="
 																		position-relative
@@ -1059,7 +1073,7 @@
 																</div>
 															</a>
 														</div>
-													</a>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -1982,7 +1996,49 @@
 		<!-- End of Street Team Modal -->
 
 		<!-- Start of Video Modals -->
-		<div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+
+		<!-- Start of BMTH Modal -->
+		<!-- <div class="modal fade" id="videoModalBMTH" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content">
+					<div class="modal-body p-1 bg-dark">
+						<div class="ratio ratio-21x9" id="player"></div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<div
+			class="modal fade"
+			id="videoModalBMTH"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="videoModalBMTHLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<!-- 16:9 aspect ratio -->
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe
+								class="embed-responsive-item"
+								src=""
+								id="video"
+								allowscriptaccess="always"
+								allow="autoplay"
+							></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End of BMTH Modal -->
+
+		<!-- Start of TGI Modal -->
+		<div class="modal fade" id="videoModalTGI" tabindex="-1" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered modal-lg">
 				<div class="modal-content">
 					<div class="modal-body p-1 bg-dark">
@@ -1991,6 +2047,32 @@
 				</div>
 			</div>
 		</div>
+		<!-- End of TGI Modal -->
+
+		<!-- Start of TAS Modal -->
+		<div class="modal fade" id="videoModalTAS" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content">
+					<div class="modal-body p-1 bg-dark">
+						<div class="ratio ratio-21x9" id="player"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End of TAS Modal -->
+
+		<!-- Start of BO Modal -->
+		<div class="modal fade" id="videoModalBO" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content">
+					<div class="modal-body p-1 bg-dark">
+						<div class="ratio ratio-21x9" id="player"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End of BO Modal -->
+
 		<!-- End of Video Modals -->
 
 		<!-- End of Modals -->

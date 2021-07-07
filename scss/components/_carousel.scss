@@ -75,6 +75,10 @@
 }
 
 .videos-carousel {
+	.video-container {
+		cursor: pointer;
+	}
+
 	.play-btn {
 		z-index: 20;
 	}
