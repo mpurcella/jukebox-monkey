@@ -284,7 +284,10 @@ table {
   right: 10px;
 }
 
-#modalVideoBMTH .btn-close {
+#modalVideoBMTH .btn-close,
+#modalVideoBO .btn-close,
+#modalVideoTGI .btn-close,
+#modalVideoTAS .btn-close {
   z-index: 10;
   top: 0;
   right: 0;

@@ -31,12 +31,40 @@ $(document).ready(function () {
 		}
 	});
 
-	// Modal Video Player - BMTH
+	// Modal Video Player
+	// BMTH
 	$('#playBMTH').click(function () {
 		$('#modalVideoBMTH').modal('show');
 	});
 
 	$('#modalVideoBMTH').on('hidden.bs.modal', function (e) {
 		$('#modalVideoBMTH iframe').attr('src', $('#modalVideoBMTH iframe').attr('src'));
+	});
+
+	// TGI
+	$('#playTGI').click(function () {
+		$('#modalVideoTGI').modal('show');
+	});
+
+	$('#modalVideoTGI').on('hidden.bs.modal', function (e) {
+		$('#modalVideoTGI iframe').attr('src', $('#modalVideoTGI iframe').attr('src'));
+	});
+
+	// TAS
+	$('#playTAS').click(function () {
+		$('#modalVideoTAS').modal('show');
+	});
+
+	$('#modalVideoTAS').on('hidden.bs.modal', function (e) {
+		$('#modalVideoTAS iframe').attr('src', $('#modalVideoTAS iframe').attr('src'));
+	});
+
+	// BO
+	$('#playBO').click(function () {
+		$('#modalVideoBO').modal('show');
+	});
+
+	$('#modalVideoBO').on('hidden.bs.modal', function (e) {
+		$('#modalVideoBO iframe').attr('src', $('#modalVideoBO iframe').attr('src'));
 	});
 });
