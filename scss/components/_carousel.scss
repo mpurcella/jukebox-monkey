@@ -8,7 +8,7 @@
 			.slide-img-container {
 				position: relative;
 				display: flex;
-				background-color: #000;
+				background-color: $primary-color;
 
 				.banner {
 					width: 100%;
@@ -49,7 +49,7 @@
 						display: flex;
 						flex-direction: column;
 						justify-content: flex-end;
-						color: #fff;
+						color: $secondary-color;
 						text-align: right;
 						text-transform: uppercase;
 						margin-right: 20px;
@@ -207,7 +207,7 @@
 				&:hover {
 					.fa-location-arrow,
 					.fa-location-arrow {
-						color: #fff;
+						color: $secondary-color;
 					}
 				}
 
@@ -248,11 +248,11 @@
 			}
 
 			.owl-item {
-				background-color: #000;
+				background-color: $primary-color;
 
 				img {
 					opacity: 0.2;
-					border: 1px solid #000;
+					border: 1px solid $primary-color;
 					box-sizing: border-box;
 				}
 
@@ -278,7 +278,7 @@
 					}
 
 					img {
-						border: 1px solid #000;
+						border: 1px solid $primary-color;
 						box-sizing: border-box;
 						opacity: 1;
 					}
@@ -295,7 +295,7 @@
 						text-align: center;
 						padding: 20px;
 						box-sizing: border-box;
-						color: #fff;
+						color: $secondary-color;
 						background-color: rgba(0, 0, 0, 0.7);
 						text-transform: uppercase;
 
@@ -305,8 +305,8 @@
 							display: flex;
 							justify-content: flex-start;
 							padding: 5px;
-							color: #000;
-							background-color: #fff;
+							color: $primary-color;
+							background-color: $secondary-color;
 							top: unset;
 							bottom: -60px;
 						}
@@ -381,7 +381,7 @@
 				&:hover {
 					.fa-location-arrow,
 					.fa-location-arrow {
-						color: #fff;
+						color: $secondary-color;
 					}
 				}
 

@@ -105,7 +105,6 @@ section {
 body {
   line-height: 1;
   font-family: "Montserrat", sans-serif;
-  background-color: red;
 }
 
 ol,
@@ -129,11 +128,6 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-.enter-btn {
-  font-family: "Oxanium", cursive;
-  font-size: 24px;
 }
 
 .hamburger-icon {
@@ -815,6 +809,7 @@ table {
   border: 0;
   border-radius: 0;
   padding: 1rem 0;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 @media (max-width: 992px) {
   .dropdown-menu {
@@ -950,7 +945,7 @@ table {
   font-size: 14px;
   outline: none;
   border: none;
-  background-color: #f8f9fa;
+  background-color: #fff;
 }
 @media (max-width: 992px) {
   .search-container .search-form-input {
@@ -991,7 +986,7 @@ table {
   transform: translateY(-50%);
   width: 30px;
   height: 20px;
-  background-color: #f8f9fa;
+  background-color: #fff;
 }
 @media (max-width: 992px) {
   .search-container .submit-btn .search-form-icon {
@@ -1411,11 +1406,6 @@ footer .navbar .copyright p {
   color: #797979;
   font-weight: 200;
   padding: 8px 0;
-}
-
-.logo {
-  max-width: 35%;
-  min-width: 250px;
 }
 
 body.active {
