@@ -1,0 +1,31 @@
+header {
+	.navbar {
+		.main-nav {
+			@media (max-width: 992px) {
+				flex-direction: column;
+				position: fixed;
+				z-index: 666;
+				top: 0;
+				right: -40%;
+				width: 40%;
+				height: 100vh;
+				overflow-y: scroll;
+				background-color: $secondary-color;
+			}
+
+			@media (max-width: 768px) {
+				right: -50%;
+				width: 50%;
+			}
+
+			@media (max-width: 576px) {
+				right: -100%;
+				width: 100%;
+			}
+
+			&.active {
+				right: 0;
+			}
+		}
+	}
+}

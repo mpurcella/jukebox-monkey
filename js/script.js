@@ -1,33 +1,85 @@
 $(document).ready(function () {
-	// Album Carousel
-	let albums = document.querySelectorAll('.product-carousel .product-carousel-item');
-	albums.forEach((el) => {
-		let minPerSlide = 5;
-		let next = el.nextElementSibling;
-		for (var i = 1; i < minPerSlide; i++) {
-			if (!next) {
-				// wrap carousel by using first child
-				next = albums[0];
+	// Hamburger Icon & Mobile Menu Animation
+	let hamBtn = document.querySelector('.hamburger-icon');
+	let mainNav = document.querySelector('.main-nav');
+	let darkBg = document.querySelector('.dark-bg');
+	let body = document.body;
+
+	hamBtn.addEventListener('click', () => {
+		hamBtn.classList.toggle('active');
+		mainNav.classList.toggle('active');
+		darkBg.classList.toggle('active');
+		body.classList.toggle('active');
+	});
+
+	// Carousels
+
+	let previcon = '<i class="fas fa-location-arrow"></i>';
+	let nexticon = '<i class="fas fa-location-arrow"></i>';
+
+	// Banner Carousel
+	$('.banners-carousel').owlCarousel({
+		loop: true,
+		items: 1,
+		nav: true,
+		navSpeed: 650,
+		dots: false,
+		navText: [previcon, nexticon]
+	});
+
+	// Albums Carousel
+	$('.albums-carousel').owlCarousel({
+		loop: true,
+		items: 1,
+		margin: 15,
+		stagePadding: 50,
+		nav: true,
+		navSpeed: 550,
+		dots: false,
+		navText: [previcon, nexticon],
+		responsive: {
+			501: {
+				items: 2,
+				stagePadding: 50
+			},
+			577: {
+				items: 2,
+				stagePadding: 65
+			},
+			769: {
+				items: 2,
+				stagePadding: 75
+			},
+			1101: {
+				items: 4,
+				stagePadding: 85
 			}
-			let cloneChild = next.cloneNode(true);
-			el.appendChild(cloneChild.children[0]);
-			next = next.nextElementSibling;
 		}
 	});
 
-	// Video Carousel
-	let videos = document.querySelectorAll('.videos-carousel .videos-carousel-item');
-	videos.forEach((el) => {
-		let minPerSlide = 2;
-		let next = el.nextElementSibling;
-		for (var i = 1; i < minPerSlide; i++) {
-			if (!next) {
-				// wrap carousel by using first child
-				next = videos[0];
+	// Videos Carousel
+	$('.videos-carousel').owlCarousel({
+		loop: true,
+		items: 1,
+		margin: 15,
+		nav: true,
+		navSpeed: 550,
+		dots: false,
+		navText: [previcon, nexticon],
+		responsive: {
+			0: {
+				items: 1,
+				margin: 0,
+				stagePadding: 0
+			},
+			769: {
+				items: 1,
+				stagePadding: 75
+			},
+			1101: {
+				items: 2,
+				stagePadding: 85
 			}
-			let cloneChild = next.cloneNode(true);
-			el.appendChild(cloneChild.children[0]);
-			next = next.nextElementSibling;
 		}
 	});
 
