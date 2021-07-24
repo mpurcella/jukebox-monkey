@@ -186,7 +186,7 @@ table {
   }
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-1 {
-  background-image: url("../images/banner1.jpeg");
+  background-image: url("/images/banner1.jpeg");
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-2 {
   background-image: url("../images/banner2.jpeg");
