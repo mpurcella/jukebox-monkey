@@ -186,16 +186,16 @@ table {
   }
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-1 {
-  background-image: url("../../images/banner1.jpeg");
+  background-image: url("../images/banner1.jpeg");
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-2 {
-  background-image: url("../../images/banner2.jpeg");
+  background-image: url("../images/banner2.jpeg");
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-3 {
-  background-image: url("../../images/banner3.jpeg");
+  background-image: url("../images/banner3.jpeg");
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-4 {
-  background-image: url("../../images/banner4.png");
+  background-image: url("../images/banner4.png");
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-album-overlay {
   display: flex;
