@@ -5,14 +5,17 @@ header {
 		flex-grow: 1;
 
 		.nav-list {
+			align-items: center;
 			margin-right: auto;
-			position: static;
+			height: 100%;
 
 			@media (max-width: 992px) {
 				width: 100%;
+				align-items: unset;
 				padding: 10px 36px;
 				box-sizing: border-box;
 				order: 3;
+				height: unset;
 			}
 
 			.nav-item {
@@ -100,7 +103,7 @@ header {
 				order: 1;
 				width: 100%;
 				min-height: 70px;
-				margin-top: 85.188px;
+				margin-top: 69.172px;
 				padding: 10px 36px;
 
 				&::before {

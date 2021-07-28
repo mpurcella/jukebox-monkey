@@ -12,6 +12,12 @@ $(document).ready(function () {
 		body.classList.toggle('active');
 	});
 
+	// let artistMenu = document.querySelector('.artist-menu');
+	// let dropdown = document.querySelector('.dropdown');
+
+	// artistMenu.addEventListener('click', () => {
+	// 	dropdown.classList.toggle('artist-menu-active');
+	// });
 	// Carousels
 
 	let previcon = '<i class="fas fa-location-arrow"></i>';

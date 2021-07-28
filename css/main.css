@@ -174,15 +174,15 @@ table {
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner {
   width: 100%;
-  height: 550px;
-  opacity: 0.7;
+  height: 450px;
+  opacity: 0.8;
   background-size: cover;
   background-position: center;
   display: block;
 }
 @media (max-width: 992px) {
   .banners .owl-carousel .owl-stage-outer .slide-img-container .banner {
-    height: 400px;
+    height: 350px;
   }
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-1 {
@@ -196,6 +196,10 @@ table {
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-4 {
   background-image: url("../images/banner4.png");
+}
+.banners .owl-carousel .owl-stage-outer .slide-img-container .banner-5 {
+  background-image: url("../images/banner5.jpeg");
+  background-position: top;
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-album-overlay {
   display: flex;
@@ -805,69 +809,71 @@ table {
   }
 }
 
-.dropdown-menu {
-  border: 0;
-  border-radius: 0;
-  padding: 1rem 0;
+.dropdown-li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+@media (max-width: 992px) {
+  .dropdown-li {
+    height: unset;
+    flex-direction: column;
+    align-items: unset;
+  }
+}
+.dropdown-li:hover .dropdown {
+  display: flex;
+}
+.dropdown-li .dropdown-arrow {
+  font-size: 12px;
+}
+.dropdown-li .dropdown {
+  width: 100%;
+  height: 244px;
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
   background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 69.172px;
+  left: 0;
+  padding: 20px;
+  z-index: 2;
 }
 @media (max-width: 992px) {
-  .dropdown-menu {
-    padding: 0.5rem 0;
+  .dropdown-li .dropdown {
+    flex-wrap: unset;
+    height: inherit;
+    background-color: unset;
+    position: relative;
+    top: unset;
+    left: unset;
+    padding: 0 10px;
+    transition: unset;
   }
 }
-.dropdown-menu .dropdown-wrapper {
-  display: flex;
-  flex-direction: row;
-  width: 90%;
-  margin: 0 auto;
+.dropdown-li .dropdown-item {
+  width: 20%;
+  margin: 5px 0;
+  text-align: center;
+}
+.dropdown-li .dropdown-item:hover {
+  background-color: unset;
 }
 @media (max-width: 992px) {
-  .dropdown-menu .dropdown-wrapper {
-    display: block;
-    width: 100%;
+  .dropdown-li .dropdown-item {
+    width: unset;
+    text-align: unset;
   }
 }
-.dropdown-menu .dropdown-wrapper .dropdown-column {
-  width: 25%;
-}
-@media (max-width: 992px) {
-  .dropdown-menu .dropdown-wrapper .dropdown-column {
-    width: 100%;
-  }
-}
-.dropdown-menu .dropdown-wrapper .dropdown-column .dropdown-item {
-  display: flex;
-  justify-content: center;
-  margin: 10px 0;
-}
-@media (max-width: 992px) {
-  .dropdown-menu .dropdown-wrapper .dropdown-column .dropdown-item {
-    justify-content: flex-start;
-  }
-}
-.dropdown-menu .dropdown-wrapper .dropdown-column .dropdown-item:hover {
-  background-color: transparent;
-}
-.dropdown-menu .dropdown-wrapper .dropdown-column .dropdown-link {
-  color: #000;
+.dropdown-li .dropdown-link {
   text-decoration: none;
-  text-transform: uppercase;
+  color: #000;
   font-size: 12px;
   font-weight: 300;
 }
-.dropdown-menu .dropdown-wrapper .dropdown-column .dropdown-link:hover {
+.dropdown-li .dropdown-link:hover {
   font-weight: 500;
-  color: #000;
-}
-@media (max-width: 1100px) {
-  .dropdown-menu .dropdown-wrapper .dropdown-column .dropdown-link {
-    font-size: 12px;
-  }
-}
-
-.dropdown-menu[data-bs-popper] {
-  margin-top: 0;
 }
 
 #contactModal .modal-header,
@@ -1121,6 +1127,14 @@ table {
   }
 }
 
+header .navbar {
+  height: 69.172px;
+}
+@media (max-width: 992px) {
+  header .navbar {
+    flex-wrap: nowrap;
+  }
+}
 @media (max-width: 992px) {
   header .navbar .main-nav {
     flex-direction: column;
@@ -1156,15 +1170,18 @@ header .main-nav {
   flex-grow: 1;
 }
 header .main-nav .nav-list {
+  align-items: center;
   margin-right: auto;
-  position: static;
+  height: 100%;
 }
 @media (max-width: 992px) {
   header .main-nav .nav-list {
     width: 100%;
+    align-items: unset;
     padding: 10px 36px;
     box-sizing: border-box;
     order: 3;
+    height: unset;
   }
 }
 header .main-nav .nav-list .nav-item {
@@ -1250,7 +1267,7 @@ header .main-nav .cart-container {
     order: 1;
     width: 100%;
     min-height: 70px;
-    margin-top: 85.188px;
+    margin-top: 69.172px;
     padding: 10px 36px;
   }
   header .main-nav .cart-container::before {

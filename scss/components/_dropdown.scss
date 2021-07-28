@@ -1,65 +1,76 @@
-.dropdown-menu {
-	border: 0;
-	border-radius: 0;
-	padding: 1rem 0;
-	background-color: rgba(255, 255, 255, 0.9);
+.dropdown-li {
+	display: flex;
+	align-items: center;
+	height: 100%;
 
 	@media (max-width: 992px) {
-		padding: 0.5rem 0;
+		height: unset;
+		flex-direction: column;
+		align-items: unset;
 	}
 
-	.dropdown-wrapper {
-		display: flex;
-		flex-direction: row;
-		width: 90%;
-		margin: 0 auto;
+	&:hover {
+		.dropdown {
+			display: flex;
+
+			// @media (max-width: 992px) {
+			// 	display: none;
+			// }
+		}
+	}
+
+	.dropdown-arrow {
+		font-size: 12px;
+	}
+
+	.dropdown {
+		width: 100%;
+		height: 244px;
+		display: none;
+		flex-direction: column;
+		flex-wrap: wrap;
+		background-color: rgba(255, 255, 255, 0.9);
+		position: absolute;
+		top: 69.172px;
+		left: 0;
+		padding: 20px;
+		z-index: 2;
 
 		@media (max-width: 992px) {
-			display: block;
-			width: 100%;
+			flex-wrap: unset;
+			height: inherit;
+			background-color: unset;
+			position: relative;
+			top: unset;
+			left: unset;
+			padding: 0 10px;
+			transition: unset;
 		}
 
-		.dropdown-column {
-			width: 25%;
+		&-item {
+			width: 20%;
+			margin: 5px 0;
+			text-align: center;
+
+			&:hover {
+				background-color: unset;
+			}
 
 			@media (max-width: 992px) {
-				width: 100%;
+				width: unset;
+				text-align: unset;
 			}
+		}
 
-			.dropdown-item {
-				display: flex;
-				justify-content: center;
-				margin: 10px 0;
+		&-link {
+			text-decoration: none;
+			color: $primary-color;
+			font-size: 12px;
+			font-weight: 300;
 
-				@media (max-width: 992px) {
-					justify-content: flex-start;
-				}
-
-				&:hover {
-					background-color: transparent;
-				}
-			}
-
-			.dropdown-link {
-				color: $primary-color;
-				text-decoration: none;
-				text-transform: uppercase;
-				font-size: 12px;
-				font-weight: 300;
-
-				&:hover {
-					font-weight: 500;
-					color: $primary-color;
-				}
-
-				@media (max-width: 1100px) {
-					font-size: 12px;
-				}
+			&:hover {
+				font-weight: 500;
 			}
 		}
 	}
-}
-
-.dropdown-menu[data-bs-popper] {
-	margin-top: 0;
 }
