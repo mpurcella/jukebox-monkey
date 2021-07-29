@@ -12,14 +12,7 @@ $(document).ready(function () {
 		body.classList.toggle('active');
 	});
 
-	// let artistMenu = document.querySelector('.artist-menu');
-	// let dropdown = document.querySelector('.dropdown');
-
-	// artistMenu.addEventListener('click', () => {
-	// 	dropdown.classList.toggle('artist-menu-active');
-	// });
 	// Carousels
-
 	let previcon = '<i class="fas fa-location-arrow"></i>';
 	let nexticon = '<i class="fas fa-location-arrow"></i>';
 
@@ -36,21 +29,23 @@ $(document).ready(function () {
 	// Albums Carousel
 	$('.albums-carousel').owlCarousel({
 		loop: true,
-		items: 1,
 		margin: 15,
-		stagePadding: 50,
 		nav: true,
 		navSpeed: 550,
 		dots: false,
 		navText: [previcon, nexticon],
 		responsive: {
+			0: {
+				items: 1,
+				stagePadding: 75
+			},
 			501: {
 				items: 2,
-				stagePadding: 50
+				stagePadding: 75
 			},
 			577: {
 				items: 2,
-				stagePadding: 65
+				stagePadding: 75
 			},
 			769: {
 				items: 2,

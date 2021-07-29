@@ -1,7 +1,7 @@
 .search-container {
 	position: relative;
 	width: 30px;
-	margin: 0 5px;
+	margin: 0 10px;
 	overflow: hidden;
 	transition: width 0.4s ease-in-out;
 
@@ -78,7 +78,12 @@
 			transform: translateY(-50%);
 			width: 30px;
 			height: 20px;
+			padding: 0 8px;
 			background-color: $secondary-color;
+
+			@media (max-width: 1200px) {
+				font-size: 16px;
+			}
 
 			@media (max-width: 992px) {
 				width: initial;
@@ -86,6 +91,7 @@
 				justify-content: unset;
 				right: unset;
 				left: 0;
+				padding: unset;
 				background-color: $secondary-color;
 			}
 

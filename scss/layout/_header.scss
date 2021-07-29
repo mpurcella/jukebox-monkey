@@ -1,36 +1,57 @@
 header {
+	position: sticky;
+	top: 0;
+	z-index: 60;
+
 	.navbar {
-		height: 69.172px;
+		height: 75px;
+		border-bottom: 1px solid #e0e0e0;
+		box-sizing: border-box;
 
 		@media (max-width: 992px) {
 			flex-wrap: nowrap;
 		}
 
-		.main-nav {
-			@media (max-width: 992px) {
-				flex-direction: column;
-				position: fixed;
-				z-index: 666;
-				top: 0;
-				right: -40%;
-				width: 40%;
-				height: 100vh;
-				overflow-y: scroll;
-				background-color: $secondary-color;
-			}
+		&-wrapper {
+			width: 1170px;
+			height: 100%;
+			margin: 0 auto;
 
-			@media (max-width: 768px) {
-				right: -50%;
-				width: 50%;
-			}
+			.container-fluid {
+				display: flex;
+				align-items: center;
 
-			@media (max-width: 576px) {
-				right: -100%;
-				width: 100%;
-			}
+				@media (max-width: 992px) {
+					justify-content: space-between;
+				}
 
-			&.active {
-				right: 0;
+				.main-nav {
+					@media (max-width: 992px) {
+						flex-direction: column;
+						position: fixed;
+						z-index: 100;
+						top: 0;
+						right: -40%;
+						width: 40%;
+						height: 100vh;
+						overflow-y: scroll;
+						background-color: $secondary-color;
+					}
+
+					@media (max-width: 768px) {
+						right: -50%;
+						width: 50%;
+					}
+
+					@media (max-width: 576px) {
+						right: -100%;
+						width: 100%;
+					}
+
+					&.active {
+						right: 0;
+					}
+				}
 			}
 		}
 	}
