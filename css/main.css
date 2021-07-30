@@ -168,6 +168,11 @@ table {
 .card-container .card:hover .card-body {
   display: none;
 }
+@media (max-width: 992px) {
+  .card-container .card:hover .card-body {
+    display: flex;
+  }
+}
 .card-container .card .card-img-top {
   width: 100%;
   height: 15vw;
@@ -834,6 +839,11 @@ table {
   display: flex;
 }
 @media (max-width: 992px) {
+  .dropdown-li:hover .dropdown {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
   .dropdown-li {
     height: unset;
     display: unset;
@@ -846,6 +856,11 @@ table {
 .dropdown-li .artist-menu-link .dropdown-arrow {
   font-size: 12px;
   margin-left: 5px;
+}
+@media (max-width: 992px) {
+  .dropdown-li .artist-menu-link .dropdown-arrow {
+    display: none;
+  }
 }
 .dropdown-li .dropdown {
   width: 100%;
@@ -887,17 +902,24 @@ table {
   }
 }
 .dropdown-li .dropdown-link {
-  text-decoration: none;
-  color: #fff;
   font-size: 12px;
   font-weight: 300;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 .dropdown-li .dropdown-link:hover {
   font-weight: 500;
 }
+@media (max-width: 1200px) {
+  .dropdown-li .dropdown-link {
+    font-size: 10px;
+  }
+}
 @media (max-width: 992px) {
   .dropdown-li .dropdown-link {
     color: #000;
+    font-weight: 500;
   }
 }
 
