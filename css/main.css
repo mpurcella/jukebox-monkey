@@ -1181,6 +1181,12 @@ table {
   }
 }
 
+footer .wrapper {
+  width: 1170px;
+  height: 100%;
+  margin: 0 auto;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -1196,22 +1202,22 @@ header .navbar {
     flex-wrap: nowrap;
   }
 }
-header .navbar-wrapper {
+header .navbar .wrapper {
   width: 1170px;
   height: 100%;
   margin: 0 auto;
 }
-header .navbar-wrapper .container-fluid {
+header .navbar .wrapper .container-fluid {
   display: flex;
   align-items: center;
 }
 @media (max-width: 992px) {
-  header .navbar-wrapper .container-fluid {
+  header .navbar .wrapper .container-fluid {
     justify-content: space-between;
   }
 }
 @media (max-width: 992px) {
-  header .navbar-wrapper .container-fluid .main-nav {
+  header .navbar .wrapper .container-fluid .main-nav {
     flex-direction: column;
     position: fixed;
     z-index: 100;
@@ -1224,18 +1230,18 @@ header .navbar-wrapper .container-fluid {
   }
 }
 @media (max-width: 768px) {
-  header .navbar-wrapper .container-fluid .main-nav {
+  header .navbar .wrapper .container-fluid .main-nav {
     right: -50%;
     width: 50%;
   }
 }
 @media (max-width: 576px) {
-  header .navbar-wrapper .container-fluid .main-nav {
+  header .navbar .wrapper .container-fluid .main-nav {
     right: -100%;
     width: 100%;
   }
 }
-header .navbar-wrapper .container-fluid .main-nav.active {
+header .navbar .wrapper .container-fluid .main-nav.active {
   right: 0;
 }
 
