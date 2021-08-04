@@ -161,43 +161,54 @@ table {
   transform: rotateZ(45deg) translate(-8px, -6px);
 }
 
-.cards-container {
+.artist-cards-container {
   margin: 32px 0;
+  padding: 0 48px;
 }
-.cards-container .artist-card {
-  margin: 8px 0;
-  padding: 0 8px;
+@media (max-width: 992px) {
+  .artist-cards-container {
+    padding: 0 32px;
+  }
 }
-.cards-container .artist-card .card:hover .card-body {
+@media (max-width: 575px) {
+  .artist-cards-container {
+    padding: 0 16px;
+  }
+}
+.artist-cards-container .artist-card {
+  margin: 4px 0;
+  padding: 0 4px;
+}
+.artist-cards-container .artist-card .card:hover .card-body {
   display: none;
 }
 @media (max-width: 992px) {
-  .cards-container .artist-card .card:hover .card-body {
+  .artist-cards-container .artist-card .card:hover .card-body {
     display: flex;
   }
 }
-.cards-container .artist-card .card .card-img-top {
+.artist-cards-container .artist-card .card img {
   width: 100%;
   height: 15vw;
   object-fit: cover;
   object-position: top;
 }
 @media (max-width: 1199px) {
-  .cards-container .artist-card .card .card-img-top {
+  .artist-cards-container .artist-card .card img {
     height: 20vw;
   }
 }
 @media (max-width: 767px) {
-  .cards-container .artist-card .card .card-img-top {
+  .artist-cards-container .artist-card .card img {
     height: 30vw;
   }
 }
 @media (max-width: 575px) {
-  .cards-container .artist-card .card .card-img-top {
+  .artist-cards-container .artist-card .card img {
     height: 50vw;
   }
 }
-.cards-container .artist-card .card .card-body {
+.artist-cards-container .artist-card .card .card-body {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -212,19 +223,259 @@ table {
   font-size: 14px;
 }
 @media (max-width: 992px) {
-  .cards-container .artist-card .card .card-body {
+  .artist-cards-container .artist-card .card .card-body {
     font-size: 13px;
   }
 }
+@media (max-width: 767px) {
+  .artist-cards-container .artist-card .card .card-body {
+    font-size: 14px;
+  }
+}
+@media (max-width: 575px) {
+  .artist-cards-container .artist-card .card .card-body {
+    font-size: 16px;
+  }
+}
+
+.merch-cards-container {
+  padding: 0 120px;
+}
+@media (max-width: 1200px) {
+  .merch-cards-container {
+    padding: 0 80px;
+  }
+}
+@media (max-width: 992px) {
+  .merch-cards-container {
+    padding: 0 60px;
+  }
+}
 @media (max-width: 768px) {
-  .cards-container .artist-card .card .card-body {
+  .merch-cards-container {
+    padding: 0 40px;
+  }
+}
+.merch-cards-container .card {
+  justify-content: center;
+  text-decoration: none;
+}
+.merch-cards-container .card:hover img {
+  opacity: 0.3;
+}
+.merch-cards-container .card:hover .card-body {
+  display: flex;
+  opacity: 1;
+}
+.merch-cards-container .card img {
+  padding: 1rem;
+  transition: all 0.2s ease-in;
+}
+.merch-cards-container .card .card-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease-in;
+}
+.merch-cards-container .card .card-body .card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+@media (max-width: 1200px) {
+  .merch-cards-container .card .card-body .card-title {
+    font-size: 16px;
+  }
+}
+@media (max-width: 991px) {
+  .merch-cards-container .card .card-body .card-title {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .merch-cards-container .card .card-body .card-title {
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .merch-cards-container .card .card-body .card-title {
+    font-size: 18px;
+  }
+}
+.merch-cards-container .card .card-body .card-subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+@media (max-width: 1200px) {
+  .merch-cards-container .card .card-body .card-subtitle {
+    font-size: 12px;
+  }
+}
+@media (max-width: 991px) {
+  .merch-cards-container .card .card-body .card-subtitle {
     font-size: 14px;
   }
 }
 @media (max-width: 768px) {
-  .cards-container .artist-card .card .card-body {
+  .merch-cards-container .card .card-body .card-subtitle {
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .merch-cards-container .card .card-body .card-subtitle {
+    font-size: 14px;
+  }
+}
+.merch-cards-container .card .card-body .card-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+@media (max-width: 1200px) {
+  .merch-cards-container .card .card-body .card-text {
+    font-size: 12px;
+  }
+}
+@media (max-width: 991px) {
+  .merch-cards-container .card .card-body .card-text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .merch-cards-container .card .card-body .card-text {
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .merch-cards-container .card .card-body .card-text {
+    font-size: 14px;
+  }
+}
+
+.album-cards-container {
+  margin: 32px 0;
+  padding: 0 48px;
+}
+@media (max-width: 992px) {
+  .album-cards-container {
+    padding: 0 32px;
+  }
+}
+@media (max-width: 575px) {
+  .album-cards-container {
+    padding: 0 16px;
+  }
+}
+.album-cards-container .album-card {
+  padding: 6px;
+}
+.album-cards-container .album-card .card {
+  text-decoration: none;
+}
+.album-cards-container .album-card .card:hover .card-body {
+  display: flex;
+}
+.album-cards-container .album-card .card img {
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+.album-cards-container .album-card .card .card-body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 992px) {
+  .album-cards-container .album-card .card .card-body {
+    position: unset;
+    display: flex;
+    background-color: unset;
+    color: #000;
+    padding: 10px;
+  }
+}
+.album-cards-container .album-card .card .card-body .card-title {
+  font-size: 16px;
+  font-weight: 200;
+  margin-bottom: 15px;
+}
+@media (max-width: 992px) {
+  .album-cards-container .album-card .card .card-body .card-title {
+    height: 28px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .album-cards-container .album-card .card .card-body .card-title {
+    font-size: 14px;
+  }
+}
+@media (max-width: 575px) {
+  .album-cards-container .album-card .card .card-body .card-title {
+    font-size: 18px;
+  }
+}
+@media (max-width: 575px) {
+  .album-cards-container .album-card .card .card-body .card-title {
     font-size: 16px;
   }
+}
+.album-cards-container .album-card .card .card-body .card-subtitle {
+  font-family: "Oxanium", cursive;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+@media (max-width: 992px) {
+  .album-cards-container .album-card .card .card-body .card-subtitle {
+    height: 24px;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .album-cards-container .album-card .card .card-body .card-subtitle {
+    font-size: 12px;
+  }
+}
+@media (max-width: 575px) {
+  .album-cards-container .album-card .card .card-body .card-subtitle {
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  .album-cards-container .album-card .card .card-body .card-subtitle {
+    font-size: 12px;
+  }
+}
+.album-cards-container .album-card .card .card-body .card-text {
+  font-size: 10px;
+  font-weight: 200;
 }
 
 .banners .owl-carousel {
@@ -252,19 +503,19 @@ table {
   }
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-1 {
-  background-image: url("../images/banner1.jpeg");
+  background-image: url("../images/banners/banner1.jpeg");
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-2 {
-  background-image: url("../images/banner2.jpeg");
+  background-image: url("../images/banners/banner2.jpeg");
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-3 {
-  background-image: url("../images/banner3.jpeg");
+  background-image: url("../images/banners/banner3.jpeg");
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-4 {
-  background-image: url("../images/banner4.png");
+  background-image: url("../images/banners/banner4.png");
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-5 {
-  background-image: url("../images/banner5.jpeg");
+  background-image: url("../images/banners/banner5.jpeg");
   background-position: top;
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-album-overlay {
@@ -477,7 +728,7 @@ table {
 @media (max-width: 992px) {
   .album-releases .owl-carousel .owl-stage-outer,
 .featured-videos .owl-carousel .owl-stage-outer {
-    padding-bottom: 60px;
+    padding-bottom: 65px;
   }
 }
 .album-releases .owl-carousel .owl-stage-outer .owl-item,
@@ -537,14 +788,14 @@ table {
   .album-releases .owl-carousel .owl-stage-outer .owl-item.active .slide-img-container .img-overlay,
 .featured-videos .owl-carousel .owl-stage-outer .owl-item.active .slide-img-container .img-overlay {
     position: absolute;
-    height: 60px;
+    height: 65px;
     display: flex;
     justify-content: flex-start;
-    padding: 5px;
+    padding: 10px 5px 5px;
     color: #000;
     background-color: #fff;
     top: unset;
-    bottom: -60px;
+    bottom: -65px;
   }
 }
 .album-releases .owl-carousel .owl-nav,
@@ -958,6 +1209,21 @@ table {
   font-weight: 600;
   text-transform: uppercase;
 }
+#contactModal .modal-body input,
+#demoModal .modal-body input,
+#streetTeamModal .modal-body input {
+  font-size: 14px;
+}
+#contactModal .modal-body select,
+#demoModal .modal-body select,
+#streetTeamModal .modal-body select {
+  font-size: 14px;
+}
+#contactModal .modal-body textarea,
+#demoModal .modal-body textarea,
+#streetTeamModal .modal-body textarea {
+  font-size: 14px;
+}
 
 #modalVideoBMTH .btn-close,
 #modalVideoBO .btn-close,
@@ -1092,6 +1358,7 @@ table {
   font-size: 24px;
   color: #fff;
   text-transform: uppercase;
+  text-align: center;
   font-weight: 200;
 }
 @media (max-width: 1200px) {
@@ -1147,6 +1414,12 @@ table {
   .community .community-container .newsletter-container p,
 .community .community-container .street-team-container p {
     font-size: 38px;
+  }
+}
+@media (max-width: 380px) {
+  .community .community-container .newsletter-container p,
+.community .community-container .street-team-container p {
+    font-size: 30px;
   }
 }
 .community .community-container .newsletter-container .newsletter-form div {
@@ -1416,6 +1689,12 @@ header .main-nav .cart-container .nav-link .cart-total .cart-number {
 
 footer .navbar {
   flex-wrap: wrap;
+  padding: 0 24px;
+}
+@media (max-width: 992px) {
+  footer .navbar {
+    padding: unset;
+  }
 }
 footer .navbar .footer-nav {
   position: relative;
@@ -1523,6 +1802,100 @@ footer .navbar .copyright p {
   color: #797979;
   font-weight: 200;
   padding: 8px 0;
+}
+
+.artist-banner {
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #000;
+}
+.artist-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  opacity: 0.8;
+}
+.artist-banner-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  text-transform: uppercase;
+}
+.artist-banner-overlay .artist-name {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+@media (max-width: 576px) {
+  .artist-banner-overlay .artist-name {
+    font-size: 35px;
+  }
+}
+.artist-banner-overlay .artist-site {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+@media (max-width: 576px) {
+  .artist-banner-overlay .artist-site {
+    font-size: 14px;
+  }
+}
+.artist-banner-overlay .artist-social {
+  display: flex;
+}
+.artist-banner-overlay .artist-social-item {
+  margin: 0 20px;
+}
+.artist-banner-overlay .artist-social-link {
+  font-size: 18px;
+  color: #fff;
+  transition: all 0.3s;
+}
+.artist-banner-overlay .artist-social-link:hover {
+  color: #797979;
+}
+@media (max-width: 576px) {
+  .artist-banner-overlay .artist-social-link {
+    font-size: 16px;
+  }
+}
+
+.artist-bio .artist-bio-text {
+  font-weight: 200;
+  text-align: center;
+  padding: 0 120px;
+}
+@media (max-width: 1200px) {
+  .artist-bio .artist-bio-text {
+    padding: 0 80px;
+  }
+}
+@media (max-width: 992px) {
+  .artist-bio .artist-bio-text {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 768px) {
+  .artist-bio .artist-bio-text {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 576px) {
+  .artist-bio .artist-bio-text {
+    font-size: 14px;
+  }
 }
 
 main h1 {

@@ -24,23 +24,23 @@
 				}
 
 				.banner-1 {
-					background-image: url('../images/banner1.jpeg');
+					background-image: url('../images/banners/banner1.jpeg');
 				}
 
 				.banner-2 {
-					background-image: url('../images/banner2.jpeg');
+					background-image: url('../images/banners/banner2.jpeg');
 				}
 
 				.banner-3 {
-					background-image: url('../images/banner3.jpeg');
+					background-image: url('../images/banners/banner3.jpeg');
 				}
 
 				.banner-4 {
-					background-image: url('../images/banner4.png');
+					background-image: url('../images/banners/banner4.png');
 				}
 
 				.banner-5 {
-					background-image: url('../images/banner5.jpeg');
+					background-image: url('../images/banners/banner5.jpeg');
 					background-position: top;
 				}
 
@@ -197,18 +197,6 @@
 					width: 60px;
 				}
 
-				// @media (max-width: 992px) {
-				// 	display: unset;
-				// }
-
-				// @media (max-width: 768px) {
-				// 	width: 50px;
-				// }
-
-				// @media (max-width: 576px) {
-				// 	width: 35px;
-				// }
-
 				&:hover {
 					.fa-location-arrow,
 					.fa-location-arrow {
@@ -249,7 +237,7 @@
 			z-index: 10;
 
 			@media (max-width: 992px) {
-				padding-bottom: 60px;
+				padding-bottom: 65px;
 			}
 
 			.owl-item {
@@ -306,14 +294,14 @@
 
 						@media (max-width: 992px) {
 							position: absolute;
-							height: 60px;
+							height: 65px;
 							display: flex;
 							justify-content: flex-start;
-							padding: 5px;
+							padding: 10px 5px 5px;
 							color: $primary-color;
 							background-color: $secondary-color;
 							top: unset;
-							bottom: -60px;
+							bottom: -65px;
 						}
 					}
 				}
@@ -370,18 +358,6 @@
 				@media (max-width: 1100px) {
 					width: 60px;
 				}
-
-				// @media (max-width: 992px) {
-				// 	display: unset;
-				// }
-
-				// @media (max-width: 768px) {
-				// 	width: 50px;
-				// }
-
-				// @media (max-width: 576px) {
-				// 	width: 35px;
-				// }
 
 				&:hover {
 					.fa-location-arrow,

@@ -16,6 +16,7 @@
 				font-size: 24px;
 				color: $secondary-color;
 				text-transform: uppercase;
+				text-align: center;
 				font-weight: 200;
 
 				@media (max-width: 1200px) {
@@ -55,6 +56,10 @@
 
 				@media (max-width: 576px) {
 					font-size: 38px;
+				}
+
+				@media (max-width: 380px) {
+					font-size: 30px;
 				}
 			}
 		}
