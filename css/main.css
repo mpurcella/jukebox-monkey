@@ -1403,6 +1403,10 @@ table {
   right: 5px;
 }
 
+.modal-backdrop {
+  opacity: 0.8 !important;
+}
+
 .search-container {
   position: relative;
   width: 30px;
