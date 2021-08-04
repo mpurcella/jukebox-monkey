@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Jukebox Monkey Offical Store</title>
+		<title>Videos</title>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -33,21 +33,25 @@
 			href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="../css/main.css" />
 	</head>
 	<body>
+		<div class="dark-bg"></div>
 		<header>
 			<!-- Start of Navbar -->
 			<nav class="navbar navbar-expand-lg px-4 py-0 bg-white">
 				<div class="wrapper">
 					<div class="container-fluid h-100">
-						<a class="navbar-brand" href="#">
-							<img src="images/monkey.png" alt="" width="40" />
+						<a class="navbar-brand" href="../index.html">
+							<img src="../images/monkey.png" alt="" width="40" />
 						</a>
 						<div class="main-nav h-100">
 							<ul class="navbar-nav nav-list">
 								<li class="nav-item dropdown-li">
-									<a class="nav-link artist-menu-link" href="artists/index.html">
+									<a
+										class="nav-link artist-menu-link"
+										href="../artists/index.html"
+									>
 										Artists
 										<span class="dropdown-arrow"
 											><i class="fas fa-chevron-down"></i>
@@ -63,9 +67,12 @@
 											>
 										</li>
 										<li class="dropdown-item">
-											<a href="artists/bad-omens.html" class="dropdown-link"
-												>Bad Omens</a
+											<a
+												href="../artists/bad-omens.html"
+												class="dropdown-link"
 											>
+												Bad Omens
+											</a>
 										</li>
 										<li class="dropdown-item">
 											<a href="#" class="dropdown-link">Bent Life</a>
@@ -150,10 +157,10 @@
 									</ul>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="releases/index.html">Releases</a>
+									<a class="nav-link" href="../releases/index.html">Releases</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="videos/index.html">Videos</a>
+									<a class="nav-link" href="#">Videos</a>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="#">Store</a>
@@ -214,235 +221,150 @@
 		</header>
 
 		<main>
-			<!-- Start of Banner Carousel -->
+			<!-- Start of Cards -->
 			<section>
-				<div class="container-fluid px-0 hero banners">
-					<div class="owl-carousel banners-carousel">
-						<a href="artists/bad-omens.html" class="slide-img-container">
-							<div class="banner banner-5"></div>
-							<div class="banner-album-overlay">
-								<div class="overlay-left">
-									<p class="overlay-artist">Bad Omens</p>
-									<p class="overlay-album">Bad Omens</p>
-									<p class="overlay-date">Out Now</p>
-								</div>
-								<div class="overlay-right">
-									<img src="images/albums/bo-album-2.jpg" alt="" />
-								</div>
-							</div>
-						</a>
-						<a href="#" class="slide-img-container">
-							<div class="banner banner-1"></div>
-							<div class="banner-album-overlay">
-								<div class="overlay-left">
-									<p class="overlay-artist">The Acacia Strain</p>
-									<p class="overlay-album">Slow Decay</p>
-									<p class="overlay-date">Out Now</p>
-								</div>
-								<div class="overlay-right">
-									<img src="images/albums/tas-album.jpeg" alt="" />
+				<h1>Videos</h1>
+				<div class="container-fluid video-cards-container">
+					<div class="row">
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 video-card">
+							<div
+								class="card border-0"
+								data-bs-toggle="modal"
+								data-bs-target="#modalVideoTAS"
+								id="playTAS"
+							>
+								<img src="../images/videos/tas-vid.jpeg" class="rounded-0" alt="" />
+								<div class="card-body">
+									<h5 class="card-title">The Acacia Strain</h5>
+									<p class="card-text">
+										"One Thousand Painful Stings" <br />
+										<span> (Ft. Courtney LaPlante) </span>
+									</p>
 								</div>
 							</div>
-						</a>
-						<a href="#" class="slide-img-container">
-							<div class="banner banner-2"></div>
-							<div class="banner-album-overlay">
-								<div class="overlay-left">
-									<p class="overlay-artist">Knuckle Puck</p>
-									<p class="overlay-album">20/20</p>
-									<p class="overlay-date">Out Now</p>
-								</div>
-								<div class="overlay-right">
-									<img src="images/albums/kp-album.jpg" alt="" />
-								</div>
-							</div>
-						</a>
-						<a href="#" class="slide-img-container">
-							<div class="banner banner-3"></div>
-							<div class="banner-album-overlay">
-								<div class="overlay-left">
-									<p class="overlay-artist">Dance Gavin Dance</p>
-									<p class="overlay-album">Afterburner</p>
-									<p class="overlay-date">9/27</p>
-								</div>
-								<div class="overlay-right">
-									<img src="images/albums/dgd-album.jpg" alt="" />
+						</div>
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 video-card">
+							<div
+								class="card border-0"
+								data-bs-toggle="modal"
+								data-bs-target="#modalVideoBO"
+								id="playBO"
+							>
+								<img src="../images/videos/bo-vid.jpeg" class="rounded-0" alt="" />
+								<div class="card-body">
+									<h5 class="card-title">Bad Omens</h5>
+									<p class="card-text">"Dethrone"</p>
 								</div>
 							</div>
-						</a>
-						<a href="#" class="slide-img-container">
-							<div class="banner banner-4"></div>
-							<div class="banner-album-overlay">
-								<div class="overlay-left">
-									<p class="overlay-artist">Crown The Empire</p>
-									<p class="overlay-album">07102010</p>
-									<p class="overlay-date">10/31</p>
-								</div>
-								<div class="overlay-right">
-									<img src="images/albums/cte-album.jpg" alt="" />
+						</div>
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 video-card">
+							<div
+								class="card border-0"
+								data-bs-toggle="modal"
+								data-bs-target="#modalVideoBMTH"
+								id="playBMTH"
+							>
+								<img
+									src="../images/videos/bmth-vid.jpeg"
+									class="rounded-0"
+									alt=""
+								/>
+								<div class="card-body">
+									<h5 class="card-title">Bring Me The Horizon</h5>
+									<p class="card-text">"Ludens"</p>
 								</div>
 							</div>
-						</a>
-					</div>
-				</div>
-			</section>
-			<!-- End of Banner Carousel -->
-
-			<!-- Start of Album Releases -->
-			<section class="album-releases">
-				<div class="container-fluid px-0 album-releases-container">
-					<div class="row m-0">
-						<div class="col">
-							<h2 class="text-uppercase text-center">Latest Releases</h2>
+						</div>
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 video-card">
+							<div
+								class="card border-0"
+								data-bs-toggle="modal"
+								data-bs-target="#modalVideoDK"
+								id="playDK"
+							>
+								<img src="../images/videos/dk-vid.jpeg" class="rounded-0" alt="" />
+								<div class="card-body">
+									<h5 class="card-title">Dustin Kensrue</h5>
+									<p class="card-text">"Of Crows and Crowns"</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 video-card">
+							<div
+								class="card border-0"
+								data-bs-toggle="modal"
+								data-bs-target="#modalVideoTGI"
+								id="playTGI"
+							>
+								<img src="../images/videos/tgi-vid.jpeg" class="rounded-0" alt="" />
+								<div class="card-body">
+									<h5 class="card-title">The Ghost Inside</h5>
+									<p class="card-text">"Aftermath"</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 video-card">
+							<div
+								class="card border-0"
+								data-bs-toggle="modal"
+								data-bs-target="#modalVideoS"
+								id="playS"
+							>
+								<img src="../images/videos/s.jpeg" class="rounded-0" alt="" />
+								<div class="card-body">
+									<h5 class="card-title">Saosin</h5>
+									<p class="card-text">"The Silver String"</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 video-card">
+							<div
+								class="card border-0"
+								data-bs-toggle="modal"
+								data-bs-target="#modalVideoSF"
+								id="playSF"
+							>
+								<img src="../images/videos/sf.jpeg" class="rounded-0" alt="" />
+								<div class="card-body">
+									<h5 class="card-title">Senses Fail</h5>
+									<p class="card-text">"Gold Jacket, Green Jacket..."</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 video-card">
+							<div
+								class="card border-0"
+								data-bs-toggle="modal"
+								data-bs-target="#modalVideoT"
+								id="playT"
+							>
+								<img src="../images/videos/t.jpeg" class="rounded-0" alt="" />
+								<div class="card-body">
+									<h5 class="card-title">Thrice</h5>
+									<p class="card-text">"Beyond The Pines"</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 video-card">
+							<div
+								class="card border-0"
+								data-bs-toggle="modal"
+								data-bs-target="#modalVideoUO"
+								id="playUO"
+							>
+								<img src="../images/videos/uo.jpeg" class="rounded-0" alt="" />
+								<div class="card-body">
+									<h5 class="card-title">Underoath</h5>
+									<p class="card-text">"Hallelujah"</p>
+								</div>
+							</div>
 						</div>
 					</div>
-
-					<!-- Start of Album Releases Carousel -->
-
-					<div class="owl-carousel albums-carousel">
-						<a href="#" class="slide-img-container">
-							<img src="images/albums/bmth-album.jpg" alt="" />
-							<div class="img-overlay">
-								<h3>Bring Me The Horizon</h3>
-								<p>Post Human: Survival Horror</p>
-							</div>
-						</a>
-						<a href="#" class="slide-img-container">
-							<img src="images/albums/attoj-album.jpeg" alt="" />
-							<div class="img-overlay">
-								<h3>At The Throne Of Judgment</h3>
-								<p>The Arcanum Order</p>
-							</div>
-						</a>
-						<a href="#" class="slide-img-container">
-							<img src="images/albums/uo-album.jpeg" alt="" />
-							<div class="img-overlay">
-								<h3>Underoath</h3>
-								<p>Define The Great Line</p>
-							</div>
-						</a>
-						<a href="#" class="slide-img-container">
-							<img src="images/albums/mmi-album.jpeg" alt="" />
-							<div class="img-overlay">
-								<h3>Miss May I</h3>
-								<p>Apologies Are For The Weak</p>
-							</div>
-						</a>
-						<a href="#" class="slide-img-container">
-							<img src="images/albums/bo-album.jpg" alt="" />
-							<div class="img-overlay">
-								<h3>Bad Omens</h3>
-								<p>Finding God Before God Finds Me</p>
-							</div>
-						</a>
-						<a href="#" class="slide-img-container">
-							<img src="images/albums/bl-album.jpeg" alt="" />
-							<div class="img-overlay">
-								<h3>Bent Life</h3>
-								<p>Never Asked For Heaven</p>
-							</div>
-						</a>
-						<a href="#" class="slide-img-container">
-							<img src="images/albums/tgi-album.jpeg" alt="" />
-							<div class="img-overlay">
-								<h3>The Ghost Inside</h3>
-								<p>The Ghost Inside</p>
-							</div>
-						</a>
-						<a href="#" class="slide-img-container">
-							<img src="images/albums/bmth-album-2.jpeg" alt="" />
-							<div class="img-overlay">
-								<h3>Bring Me The Horizon</h3>
-								<p>Amo</p>
-							</div>
-						</a>
-						<a href="#" class="slide-img-container">
-							<img src="images/albums/ck-album.jpeg" alt="" />
-							<div class="img-overlay">
-								<h3>Comeback Kid</h3>
-								<p>Wake The Dead</p>
-							</div>
-						</a>
-					</div>
-					<!-- End of Album Releases Carousel -->
 				</div>
 			</section>
-			<!-- End of Album Releases -->
+			<!-- End of Cards -->
 
-			<!-- Start of Videos -->
-			<section class="featured-videos">
-				<div class="container-fluid px-0 featured-videos-container">
-					<div class="row m-0">
-						<div class="col">
-							<h2 class="text-uppercase text-center">Featured Videos</h2>
-						</div>
-					</div>
-
-					<!-- Start of Videos Carousel -->
-
-					<div class="owl-carousel videos-carousel">
-						<a
-							href="#"
-							class="slide-img-container"
-							data-bs-toggle="modal"
-							data-bs-target="#modalVideoBMTH"
-							id="playBMTH"
-						>
-							<img src="images/videos/bmth-vid.jpeg" alt="" />
-							<div class="img-overlay">
-								<h3>Bring Me The Horizon</h3>
-								<p>"Ludens"</p>
-							</div>
-						</a>
-						<a
-							href="#"
-							class="slide-img-container"
-							data-bs-toggle="modal"
-							data-bs-target="#modalVideoBO"
-							id="playBO"
-						>
-							<img src="images/videos/bo-vid.jpeg" alt="" />
-							<div class="img-overlay">
-								<h3>Bad Omens</h3>
-								<p>"Dethrone"</p>
-							</div>
-						</a>
-						<a
-							href="#"
-							class="slide-img-container"
-							data-bs-toggle="modal"
-							data-bs-target="#modalVideoTGI"
-							id="playTGI"
-						>
-							<img src="images/videos/tgi-vid.jpeg" alt="" />
-							<div class="img-overlay">
-								<h3>The Ghost Inside</h3>
-								<p>"Aftermath"</p>
-							</div>
-						</a>
-						<a
-							href="#"
-							class="slide-img-container"
-							data-bs-toggle="modal"
-							data-bs-target="#modalVideoTAS"
-							id="playTAS"
-						>
-							<img src="images/videos/tas-vid.jpeg" alt="" />
-							<div class="img-overlay">
-								<h3>The Acacia Strain</h3>
-								<p>
-									"One Thousand Painful Stings
-									<span>(Ft. Courtney LaPlante)</span>"
-								</p>
-							</div>
-						</a>
-					</div>
-					<!-- End of Videos Carousel -->
-				</div>
-			</section>
-			<!-- End of Videos -->
-
-			<!-- Start of Community -->
+			<!-- Start of Community Section -->
 			<section>
 				<div class="container-fluid py-3 bg-dark community">
 					<div class="row px-4 py-3 community-container">
@@ -513,7 +435,7 @@
 					</div>
 				</div>
 			</section>
-			<!-- End of Community -->
+			<!-- End of Community Section -->
 		</main>
 
 		<footer>
@@ -585,8 +507,6 @@
 			</nav>
 			<!-- End of Footer -->
 		</footer>
-
-		<div class="dark-bg"></div>
 
 		<!-- Start of Modals -->
 		<!-- Start of Contact Modal -->
@@ -1292,12 +1212,12 @@
 		<!-- End of Street Team Modal -->
 
 		<!-- Start of Video Modals -->
-		<!-- Start of BMTH Modal -->
+		<!-- Start of TAS Modal -->
 		<div
 			class="modal fade"
-			id="modalVideoBMTH"
+			id="modalVideoTAS"
 			tabindex="-1"
-			aria-labelledby="modalVideoBMTHLabel"
+			aria-labelledby="modalVideoTASLabel"
 			aria-hidden="true"
 		>
 			<div class="modal-dialog modal-lg">
@@ -1305,21 +1225,18 @@
 					<div class="modal-body p-0">
 						<div class="ratio ratio-16x9">
 							<iframe
-								id="playerBMTH"
-								src="https://www.youtube.com/embed/B9wvTuDC-H0?rel=0"
+								src="https://www.youtube.com/embed/ZP-s87MGm7c?rel=0"
 								title="YouTube video player"
 								frameborder="0"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 								allowfullscreen
-							>
-								></iframe
-							>
+							></iframe>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- End of BMTH Modal -->
+		<!-- End of TAS Modal -->
 
 		<!-- Start of BO Modal -->
 		<div
@@ -1334,7 +1251,6 @@
 					<div class="modal-body p-0">
 						<div class="ratio ratio-16x9">
 							<iframe
-								id="playerBO"
 								src="https://www.youtube.com/embed/h31THl8shy4?rel=0"
 								title="YouTube video player"
 								frameborder="0"
@@ -1350,6 +1266,60 @@
 		</div>
 		<!-- End of BO Modal -->
 
+		<!-- Start of BMTH Modal -->
+		<div
+			class="modal fade"
+			id="modalVideoBMTH"
+			tabindex="-1"
+			aria-labelledby="modalVideoBMTHLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content position-relative">
+					<div class="modal-body p-0">
+						<div class="ratio ratio-16x9">
+							<iframe
+								src="https://www.youtube.com/embed/B9wvTuDC-H0?rel=0"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+							>
+								></iframe
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End of BMTH Modal -->
+
+		<!-- Start of DK Modal -->
+		<div
+			class="modal fade"
+			id="modalVideoDK"
+			tabindex="-1"
+			aria-labelledby="modalVideoDKLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content position-relative">
+					<div class="modal-body p-0">
+						<div class="ratio ratio-16x9">
+							<iframe
+								src="https://www.youtube.com/embed/dawMFkPNJpM"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+							></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End of DK Modal -->
+
 		<!-- Start of TGI Modal -->
 		<div
 			class="modal fade"
@@ -1363,7 +1333,6 @@
 					<div class="modal-body p-0">
 						<div class="ratio ratio-16x9">
 							<iframe
-								id="playerTGI"
 								src="https://www.youtube.com/embed/4CdFBfKMAU4?rel=0"
 								title="YouTube video player"
 								frameborder="0"
@@ -1379,12 +1348,12 @@
 		</div>
 		<!-- End of TGI Modal -->
 
-		<!-- Start of TAS Modal -->
+		<!-- Start of S Modal -->
 		<div
 			class="modal fade"
-			id="modalVideoTAS"
+			id="modalVideoS"
 			tabindex="-1"
-			aria-labelledby="modalVideoTASLabel"
+			aria-labelledby="modalVideoSLabel"
 			aria-hidden="true"
 		>
 			<div class="modal-dialog modal-lg">
@@ -1392,8 +1361,7 @@
 					<div class="modal-body p-0">
 						<div class="ratio ratio-16x9">
 							<iframe
-								id="playerTAS"
-								src="https://www.youtube.com/embed/ZP-s87MGm7c?rel=0"
+								src="https://www.youtube.com/embed/hc449MVJep0"
 								title="YouTube video player"
 								frameborder="0"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -1404,7 +1372,85 @@
 				</div>
 			</div>
 		</div>
-		<!-- End of TAS Modal -->
+		<!-- End of S Modal -->
+
+		<!-- Start of SF Modal -->
+		<div
+			class="modal fade"
+			id="modalVideoSF"
+			tabindex="-1"
+			aria-labelledby="modalVideoSFLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content position-relative">
+					<div class="modal-body p-0">
+						<div class="ratio ratio-16x9">
+							<iframe
+								src="https://www.youtube.com/embed/EfGSZspzCV8"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+							></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End of SF Modal -->
+
+		<!-- Start of T Modal -->
+		<div
+			class="modal fade"
+			id="modalVideoT"
+			tabindex="-1"
+			aria-labelledby="modalVideoTLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content position-relative">
+					<div class="modal-body p-0">
+						<div class="ratio ratio-16x9">
+							<iframe
+								src="https://www.youtube.com/embed/ElUMn9exqyg"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+							></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End of T Modal -->
+
+		<!-- Start of UO Modal -->
+		<div
+			class="modal fade"
+			id="modalVideoUO"
+			tabindex="-1"
+			aria-labelledby="modalVideoUOLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content position-relative">
+					<div class="modal-body p-0">
+						<div class="ratio ratio-16x9">
+							<iframe
+								src="https://www.youtube.com/embed/HFEDg8RdfbM"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+							></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End of UO Modal -->
 		<!-- End of Video Modals -->
 
 		<!-- End of Modals -->
@@ -1420,6 +1466,6 @@
 			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 			crossorigin="anonymous"
 		></script>
-		<script src="js/script.js"></script>
+		<script src="../js/script.js"></script>
 	</body>
 </html>

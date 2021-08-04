@@ -243,6 +243,18 @@
 			.owl-item {
 				background-color: $primary-color;
 
+				.slide-img-container {
+					&:hover {
+						.play-icon-container {
+							display: none;
+
+							@media (max-width: 992px) {
+								display: flex;
+							}
+						}
+					}
+				}
+
 				img {
 					opacity: 0.2;
 					border: 1px solid $primary-color;

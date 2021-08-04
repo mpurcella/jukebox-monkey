@@ -85,13 +85,14 @@ $(document).ready(function () {
 	});
 
 	// Modal Video Player
-	// BMTH
-	$('#playBMTH').click(function () {
-		$('#modalVideoBMTH').modal('show');
+
+	// TAS
+	$('#playTAS').click(function () {
+		$('#modalVideoTAS').modal('show');
 	});
 
-	$('#modalVideoBMTH').on('hidden.bs.modal', function (e) {
-		$('#modalVideoBMTH iframe').attr('src', $('#modalVideoBMTH iframe').attr('src'));
+	$('#modalVideoTAS').on('hidden.bs.modal', function (e) {
+		$('#modalVideoTAS iframe').attr('src', $('#modalVideoTAS iframe').attr('src'));
 	});
 
 	// BO
@@ -103,6 +104,24 @@ $(document).ready(function () {
 		$('#modalVideoBO iframe').attr('src', $('#modalVideoBO iframe').attr('src'));
 	});
 
+	// BMTH
+	$('#playBMTH').click(function () {
+		$('#modalVideoBMTH').modal('show');
+	});
+
+	$('#modalVideoBMTH').on('hidden.bs.modal', function (e) {
+		$('#modalVideoBMTH iframe').attr('src', $('#modalVideoBMTH iframe').attr('src'));
+	});
+
+	// DK
+	$('#playDK').click(function () {
+		$('#modalVideoDK').modal('show');
+	});
+
+	$('#modalVideoDK').on('hidden.bs.modal', function (e) {
+		$('#modalVideoDK iframe').attr('src', $('#modalVideoDK iframe').attr('src'));
+	});
+
 	// TGI
 	$('#playTGI').click(function () {
 		$('#modalVideoTGI').modal('show');
@@ -112,12 +131,39 @@ $(document).ready(function () {
 		$('#modalVideoTGI iframe').attr('src', $('#modalVideoTGI iframe').attr('src'));
 	});
 
-	// TAS
-	$('#playTAS').click(function () {
-		$('#modalVideoTAS').modal('show');
+	// S
+	$('#playS').click(function () {
+		$('#modalVideoS').modal('show');
 	});
 
-	$('#modalVideoTAS').on('hidden.bs.modal', function (e) {
-		$('#modalVideoTAS iframe').attr('src', $('#modalVideoTAS iframe').attr('src'));
+	$('#modalVideoS').on('hidden.bs.modal', function (e) {
+		$('#modalVideoS iframe').attr('src', $('#modalVideoS iframe').attr('src'));
+	});
+
+	// SF
+	$('#playSF').click(function () {
+		$('#modalVideoSF').modal('show');
+	});
+
+	$('#modalVideoSF').on('hidden.bs.modal', function (e) {
+		$('#modalVideoSF iframe').attr('src', $('#modalVideoSF iframe').attr('src'));
+	});
+
+	// T
+	$('#playT').click(function () {
+		$('#modalVideoT').modal('show');
+	});
+
+	$('#modalVideoT').on('hidden.bs.modal', function (e) {
+		$('#modalVideoT iframe').attr('src', $('#modalVideoT iframe').attr('src'));
+	});
+
+	// UO
+	$('#playUO').click(function () {
+		$('#modalVideoUO').modal('show');
+	});
+
+	$('#modalVideoUO').on('hidden.bs.modal', function (e) {
+		$('#modalVideoUO iframe').attr('src', $('#modalVideoUO iframe').attr('src'));
 	});
 });
