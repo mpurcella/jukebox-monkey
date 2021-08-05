@@ -677,6 +677,10 @@ table {
   background-image: url("../images/banners/banner5.jpeg");
   background-position: top;
 }
+.banners .owl-carousel .owl-stage-outer .slide-img-container .banner-6 {
+  background-image: url("../images/banners/banner6.jpeg");
+  background-position: top;
+}
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-album-overlay {
   display: flex;
   position: absolute;
