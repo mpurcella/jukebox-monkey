@@ -277,6 +277,8 @@
 					}
 
 					&:hover {
+						cursor: pointer;
+
 						.img-overlay {
 							display: flex;
 						}
