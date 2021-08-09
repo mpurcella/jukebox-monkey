@@ -161,7 +161,10 @@ table {
   transform: rotateZ(45deg) translate(-8px, -6px);
 }
 
-.play-icon-container {
+.video-img-container {
+  position: relative;
+}
+.video-img-container .fa-play-circle {
   position: absolute;
   top: 0;
   left: 0;
@@ -170,10 +173,8 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.play-icon-container .fa-play-circle {
-  font-size: 60px;
   color: #fff;
+  font-size: 50px;
 }
 
 .artist-cards-container {
@@ -521,15 +522,16 @@ table {
 .video-cards-container .video-card .card:hover .card-body {
   display: flex;
 }
-.video-cards-container .video-card .card:hover .play-icon-container {
+.video-cards-container .video-card .card:hover .fa-play-circle {
   display: none;
 }
 @media (max-width: 992px) {
-  .video-cards-container .video-card .card:hover .play-icon-container {
+  .video-cards-container .video-card .card:hover .fa-play-circle {
     display: flex;
   }
 }
 .video-cards-container .video-card .card img {
+  width: 100%;
   border: 1px solid #000;
   box-sizing: border-box;
 }
@@ -898,13 +900,13 @@ table {
 .featured-videos .owl-carousel .owl-stage-outer .owl-item {
   background-color: #000;
 }
-.album-releases .owl-carousel .owl-stage-outer .owl-item .slide-img-container:hover .play-icon-container,
-.featured-videos .owl-carousel .owl-stage-outer .owl-item .slide-img-container:hover .play-icon-container {
+.album-releases .owl-carousel .owl-stage-outer .owl-item .slide-img-container:hover .fa-play-circle,
+.featured-videos .owl-carousel .owl-stage-outer .owl-item .slide-img-container:hover .fa-play-circle {
   display: none;
 }
 @media (max-width: 992px) {
-  .album-releases .owl-carousel .owl-stage-outer .owl-item .slide-img-container:hover .play-icon-container,
-.featured-videos .owl-carousel .owl-stage-outer .owl-item .slide-img-container:hover .play-icon-container {
+  .album-releases .owl-carousel .owl-stage-outer .owl-item .slide-img-container:hover .fa-play-circle,
+.featured-videos .owl-carousel .owl-stage-outer .owl-item .slide-img-container:hover .fa-play-circle {
     display: flex;
   }
 }

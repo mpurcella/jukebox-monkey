@@ -32,18 +32,19 @@
 	}
 }
 
-.play-icon-container {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.video-img-container {
+	position: relative;
 
 	.fa-play-circle {
-		font-size: 60px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		color: $secondary-color;
+		font-size: 50px;
 	}
 }
