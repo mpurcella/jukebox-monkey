@@ -303,6 +303,7 @@
 						left: 0;
 						display: none;
 						flex-direction: column;
+						justify-content: center;
 						align-items: center;
 						text-align: center;
 						padding: 20px;
@@ -414,8 +415,6 @@
 .album-releases {
 	.owl-item.active {
 		.img-overlay {
-			justify-content: center;
-
 			h3 {
 				font-size: 18px;
 				font-weight: 200;

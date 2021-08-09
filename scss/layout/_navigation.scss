@@ -27,7 +27,7 @@ header {
 			}
 
 			.nav-link {
-				font-size: 16px;
+				font-size: 14px;
 				color: $primary-color;
 				text-transform: uppercase;
 				font-weight: 200;
@@ -35,10 +35,6 @@ header {
 
 				&:hover {
 					color: $tertiary-color;
-				}
-
-				@media (max-width: 1200px) {
-					font-size: 14px;
 				}
 
 				@media (max-width: 992px) {
