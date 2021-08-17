@@ -12,6 +12,26 @@ $(document).ready(function () {
 		body.classList.toggle('active');
 	});
 
+	// Featured/Thumbail Image Hover/Change Effect
+	let featuredImg = document.querySelector('.featured-img');
+	let thumbnailImgs = document.getElementsByClassName('thumbnail-img');
+	let activeImgs = document.getElementsByClassName('active');
+
+	for (let i = 0; i < thumbnailImgs.length; i++) {
+		thumbnailImgs[i].addEventListener('click', function () {
+			if (activeImgs.length > 0) {
+				activeImgs[0].classList.remove('active');
+			}
+			this.classList.add('active');
+			featuredImg.src = this.src;
+		});
+	}
+
+	// Cart Total Change
+	let cartNum = document.querySelectorAll('.cart-number');
+	let addToCartBtn = document.querySelectorAll('.cart-btn');
+	let quantitySel = document.getElementsByClassName('.form-select');
+
 	// Carousels
 	let previcon = '<i class="fas fa-location-arrow"></i>';
 	let nexticon = '<i class="fas fa-location-arrow"></i>';
