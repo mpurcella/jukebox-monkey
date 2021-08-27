@@ -252,23 +252,9 @@
 	margin-bottom: 40px;
 	padding: 0 20px;
 
-	@media (min-width: 1199px) {
-		max-width: 1170px;
-	}
-
 	.related-product-header {
 		font-size: 18px;
 		font-weight: 200;
 		margin-bottom: 40px;
-	}
-
-	.related-product-card:last-child {
-		@media (max-width: 991px) {
-			display: none;
-		}
-
-		@media (max-width: 767px) {
-			display: unset;
-		}
 	}
 }

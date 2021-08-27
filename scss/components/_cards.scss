@@ -6,10 +6,6 @@
 		&:hover {
 			.card-body {
 				display: none;
-
-				@media (max-width: 992px) {
-					display: flex;
-				}
 			}
 		}
 
@@ -70,14 +66,10 @@
 	.card {
 		justify-content: center;
 		text-decoration: none;
-		padding: 20px 20px 105px;
+		padding: 20px 20px 100px;
 
-		@media (max-width: 991px) {
-			padding: 10px 10px 105px;
-		}
-
-		@media (max-width: 576px) {
-			padding: 20px;
+		@media (max-width: 575px) {
+			padding: 20px 20px 50px;
 		}
 
 		&:hover {
@@ -108,7 +100,7 @@
 			}
 
 			.card-subtitle {
-				font-weight: 300;
+				font-weight: 200;
 				margin-top: 0;
 				margin-bottom: 10px;
 			}
@@ -124,29 +116,53 @@
 	margin-bottom: 20px;
 
 	.card-body {
-		top: 335px;
+		top: 340px;
 
 		@media (max-width: 1198px) {
-			top: 265px;
+			top: 270px;
 		}
 
 		@media (max-width: 991px) {
-			top: 332.344px;
+			top: 307.344px;
 		}
 
 		@media (max-width: 767px) {
-			top: 252.344px;
+			top: 217.344px;
 		}
 
 		.card-title {
-			font-size: 14px;
+			font-size: 15px;
 
 			@media (max-width: 1198px) {
 				font-size: 13px;
 			}
 
+			@media (max-width: 991px) {
+				font-size: 14px;
+			}
+
 			@media (max-width: 767px) {
 				font-size: 12px;
+			}
+
+			@media (max-width: 576px) {
+				font-size: 16px;
+			}
+		}
+
+		.card-subtitle {
+			font-size: 13px;
+
+			@media (max-width: 1198px) {
+				font-size: 12px;
+			}
+
+			@media (max-width: 991px) {
+				font-size: 13px;
+			}
+
+			@media (max-width: 767px) {
+				font-size: 11px;
 			}
 
 			@media (max-width: 576px) {
@@ -154,27 +170,23 @@
 			}
 		}
 
-		.card-subtitle {
-			font-size: 12px;
-
-			@media (max-width: 767px) {
-				font-size: 11px;
-			}
-
-			@media (max-width: 576px) {
-				font-size: 12px;
-			}
-		}
-
 		.card-text {
 			font-size: 12px;
 
-			@media (max-width: 767px) {
+			@media (max-width: 1198px) {
 				font-size: 11px;
 			}
 
-			@media (max-width: 576px) {
+			@media (max-width: 991px) {
 				font-size: 12px;
+			}
+
+			@media (max-width: 767px) {
+				font-size: 10px;
+			}
+
+			@media (max-width: 576px) {
+				font-size: 13px;
 			}
 		}
 	}
@@ -186,25 +198,61 @@
 	}
 
 	.card-body {
-		top: 248.844px;
+		top: 280px;
+
+		@media (max-width: 1399px) {
+			top: 235px;
+		}
 
 		@media (max-width: 1198px) {
-			top: 196.344px;
+			top: 268.656px;
 		}
 
 		@media (max-width: 991px) {
-			top: 195px;
+			top: 188.656px;
 		}
 
 		@media (max-width: 767px) {
-			top: 222.344px;
+			top: 216px;
 		}
 
 		.card-title {
-			font-size: 14px;
+			font-size: 15px;
+
+			@media (max-width: 1399px) {
+				font-size: 14px;
+			}
+
+			@media (max-width: 1198px) {
+				font-size: 15px;
+			}
+
+			@media (max-width: 991px) {
+				font-size: 13px;
+			}
+
+			@media (max-width: 767px) {
+				font-size: 14px;
+			}
+
+			@media (max-width: 576px) {
+				font-size: 16px;
+			}
+		}
+
+		.card-subtitle {
+			font-size: 13px;
+
+			@media (max-width: 1399px) {
+				font-size: 12px;
+			}
 
 			@media (max-width: 1198px) {
 				font-size: 13px;
+			}
+
+			@media (max-width: 991px) {
+				font-size: 11px;
 			}
 
 			@media (max-width: 767px) {
@@ -216,28 +264,38 @@
 			}
 		}
 
-		.card-subtitle {
-			font-size: 12px;
-
-			@media (max-width: 767px) {
-				font-size: 11px;
-			}
-
-			@media (max-width: 576px) {
-				font-size: 12px;
-			}
-		}
-
 		.card-text {
 			font-size: 12px;
 
+			@media (max-width: 1399px) {
+				font-size: 11px;
+			}
+
+			@media (max-width: 1198px) {
+				font-size: 12px;
+			}
+
+			@media (max-width: 991px) {
+				font-size: 10px;
+			}
+
 			@media (max-width: 767px) {
 				font-size: 11px;
 			}
 
 			@media (max-width: 576px) {
-				font-size: 12px;
+				font-size: 13px;
 			}
+		}
+	}
+
+	&:last-child {
+		@media (max-width: 1198px) {
+			display: none;
+		}
+
+		@media (max-width: 767px) {
+			display: unset;
 		}
 	}
 }

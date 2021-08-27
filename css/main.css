@@ -262,11 +262,6 @@ table {
 .artist-card .card:hover .card-body {
   display: none;
 }
-@media (max-width: 992px) {
-  .artist-card .card:hover .card-body {
-    display: flex;
-  }
-}
 .artist-card .card img {
   width: 100%;
   height: 15vw;
@@ -327,16 +322,11 @@ table {
 .product-card .card {
   justify-content: center;
   text-decoration: none;
-  padding: 20px 20px 105px;
+  padding: 20px 20px 100px;
 }
-@media (max-width: 991px) {
+@media (max-width: 575px) {
   .product-card .card {
-    padding: 10px 10px 105px;
-  }
-}
-@media (max-width: 576px) {
-  .product-card .card {
-    padding: 20px;
+    padding: 20px 20px 50px;
   }
 }
 .product-card .card:hover {
@@ -366,7 +356,7 @@ table {
   margin-bottom: 10px;
 }
 .product-card .card .card-body .card-subtitle {
-  font-weight: 300;
+  font-weight: 200;
   margin-top: 0;
   margin-bottom: 10px;
 }
@@ -378,31 +368,36 @@ table {
   margin-bottom: 20px;
 }
 .merch-card .card-body {
-  top: 335px;
+  top: 340px;
 }
 @media (max-width: 1198px) {
   .merch-card .card-body {
-    top: 265px;
+    top: 270px;
   }
 }
 @media (max-width: 991px) {
   .merch-card .card-body {
-    top: 332.344px;
+    top: 307.344px;
   }
 }
 @media (max-width: 767px) {
   .merch-card .card-body {
-    top: 252.344px;
+    top: 217.344px;
   }
 }
 .merch-card .card-body .card-title {
-  font-size: 14px;
+  font-size: 15px;
 }
 @media (max-width: 1198px) {
   .merch-card .card-body .card-title {
     font-size: 13px;
   }
 }
+@media (max-width: 991px) {
+  .merch-card .card-body .card-title {
+    font-size: 14px;
+  }
+}
 @media (max-width: 767px) {
   .merch-card .card-body .card-title {
     font-size: 12px;
@@ -410,11 +405,21 @@ table {
 }
 @media (max-width: 576px) {
   .merch-card .card-body .card-title {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .merch-card .card-body .card-subtitle {
-  font-size: 12px;
+  font-size: 13px;
+}
+@media (max-width: 1198px) {
+  .merch-card .card-body .card-subtitle {
+    font-size: 12px;
+  }
+}
+@media (max-width: 991px) {
+  .merch-card .card-body .card-subtitle {
+    font-size: 13px;
+  }
 }
 @media (max-width: 767px) {
   .merch-card .card-body .card-subtitle {
@@ -423,20 +428,30 @@ table {
 }
 @media (max-width: 576px) {
   .merch-card .card-body .card-subtitle {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 .merch-card .card-body .card-text {
   font-size: 12px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1198px) {
   .merch-card .card-body .card-text {
     font-size: 11px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 991px) {
   .merch-card .card-body .card-text {
     font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .merch-card .card-body .card-text {
+    font-size: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .merch-card .card-body .card-text {
+    font-size: 13px;
   }
 }
 
@@ -446,57 +461,102 @@ table {
   }
 }
 .related-product-card .card-body {
-  top: 248.844px;
+  top: 280px;
+}
+@media (max-width: 1399px) {
+  .related-product-card .card-body {
+    top: 235px;
+  }
 }
 @media (max-width: 1198px) {
   .related-product-card .card-body {
-    top: 196.344px;
+    top: 268.656px;
   }
 }
 @media (max-width: 991px) {
   .related-product-card .card-body {
-    top: 195px;
+    top: 188.656px;
   }
 }
 @media (max-width: 767px) {
   .related-product-card .card-body {
-    top: 222.344px;
+    top: 216px;
   }
 }
 .related-product-card .card-body .card-title {
-  font-size: 14px;
+  font-size: 15px;
+}
+@media (max-width: 1399px) {
+  .related-product-card .card-body .card-title {
+    font-size: 14px;
+  }
 }
 @media (max-width: 1198px) {
+  .related-product-card .card-body .card-title {
+    font-size: 15px;
+  }
+}
+@media (max-width: 991px) {
   .related-product-card .card-body .card-title {
     font-size: 13px;
   }
 }
 @media (max-width: 767px) {
   .related-product-card .card-body .card-title {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media (max-width: 576px) {
   .related-product-card .card-body .card-title {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .related-product-card .card-body .card-subtitle {
-  font-size: 12px;
+  font-size: 13px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1399px) {
+  .related-product-card .card-body .card-subtitle {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1198px) {
+  .related-product-card .card-body .card-subtitle {
+    font-size: 13px;
+  }
+}
+@media (max-width: 991px) {
   .related-product-card .card-body .card-subtitle {
     font-size: 11px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   .related-product-card .card-body .card-subtitle {
     font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .related-product-card .card-body .card-subtitle {
+    font-size: 14px;
   }
 }
 .related-product-card .card-body .card-text {
   font-size: 12px;
 }
+@media (max-width: 1399px) {
+  .related-product-card .card-body .card-text {
+    font-size: 11px;
+  }
+}
+@media (max-width: 1198px) {
+  .related-product-card .card-body .card-text {
+    font-size: 12px;
+  }
+}
+@media (max-width: 991px) {
+  .related-product-card .card-body .card-text {
+    font-size: 10px;
+  }
+}
 @media (max-width: 767px) {
   .related-product-card .card-body .card-text {
     font-size: 11px;
@@ -504,7 +564,17 @@ table {
 }
 @media (max-width: 576px) {
   .related-product-card .card-body .card-text {
-    font-size: 12px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 1198px) {
+  .related-product-card:last-child {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .related-product-card:last-child {
+    display: unset;
   }
 }
 
@@ -804,8 +874,8 @@ table {
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-album-overlay .overlay-left .overlay-artist {
   font-size: 40px;
-  font-weight: 100;
-  margin-bottom: 5px;
+  font-weight: 200;
+  margin-bottom: 8px;
 }
 @media (max-width: 1200px) {
   .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-album-overlay .overlay-left .overlay-artist {
@@ -823,24 +893,28 @@ table {
   }
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-album-overlay .overlay-left .overlay-album {
-  font-family: "Oxanium", cursive;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 900;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 @media (max-width: 1200px) {
-  .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-album-overlay .overlay-left .overlay-album {
-    font-size: 30px;
-  }
-}
-@media (max-width: 992px) {
   .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-album-overlay .overlay-left .overlay-album {
     font-size: 25px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-album-overlay .overlay-left .overlay-album {
     font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-album-overlay .overlay-left .overlay-album {
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-album-overlay .overlay-left .overlay-album {
+    font-size: 14px;
   }
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-album-overlay .overlay-left .overlay-date {
@@ -1562,36 +1636,27 @@ table {
 #demoModal .modal-body label,
 #streetTeamModal .modal-body label {
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
 }
 #contactModal .modal-body input,
 #demoModal .modal-body input,
 #streetTeamModal .modal-body input {
-  font-size: 14px;
+  font-size: 12px;
 }
 #contactModal .modal-body select,
 #demoModal .modal-body select,
 #streetTeamModal .modal-body select {
-  font-size: 14px;
+  font-size: 12px;
 }
 #contactModal .modal-body textarea,
 #demoModal .modal-body textarea,
 #streetTeamModal .modal-body textarea {
-  font-size: 14px;
-}
-
-#modalVideoBMTH .btn-close,
-#modalVideoBO .btn-close,
-#modalVideoTGI .btn-close,
-#modalVideoTAS .btn-close {
-  z-index: 10;
-  top: 5px;
-  right: 5px;
+  font-size: 12px;
 }
 
 .modal-backdrop {
-  opacity: 0.8 !important;
+  opacity: 0.9 !important;
 }
 
 .search-container {
@@ -2188,7 +2253,7 @@ footer .copyright p {
 }
 @media (max-width: 575px) {
   .merch-cards-container {
-    margin-bottom: 0;
+    margin-bottom: 20;
   }
 }
 
@@ -2506,25 +2571,10 @@ body .featured-videos .featured-videos-container h2 {
   margin-bottom: 40px;
   padding: 0 20px;
 }
-@media (min-width: 1199px) {
-  .related-product-cards-container {
-    max-width: 1170px;
-  }
-}
 .related-product-cards-container .related-product-header {
   font-size: 18px;
   font-weight: 200;
   margin-bottom: 40px;
-}
-@media (max-width: 991px) {
-  .related-product-cards-container .related-product-card:last-child {
-    display: none;
-  }
-}
-@media (max-width: 767px) {
-  .related-product-cards-container .related-product-card:last-child {
-    display: unset;
-  }
 }
 
 .album-cards-container {
