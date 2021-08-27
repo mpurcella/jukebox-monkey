@@ -17,7 +17,7 @@
 				color: $secondary-color;
 				text-transform: uppercase;
 				text-align: center;
-				font-weight: 200;
+				font-weight: 100;
 
 				@media (max-width: 1200px) {
 					font-size: 20px;
@@ -37,17 +37,17 @@
 			}
 
 			p {
-				font-size: 56px;
+				font-size: 54px;
 				font-family: 'Oxanium', cursive;
 				color: $secondary-color;
 				font-weight: 900;
 
 				@media (max-width: 1200px) {
-					font-size: 48px;
+					font-size: 50px;
 				}
 
 				@media (max-width: 992px) {
-					font-size: 60px;
+					font-size: 58px;
 				}
 
 				@media (max-width: 768px) {
@@ -59,27 +59,7 @@
 				}
 
 				@media (max-width: 380px) {
-					font-size: 30px;
-				}
-			}
-		}
-
-		.newsletter-container {
-			.newsletter-form {
-				div {
-					width: 50%;
-					margin-right: 24px;
-
-					@media (max-width: 576px) {
-						width: 100%;
-						margin: 0 0 24px;
-					}
-
-					input {
-						@media (max-width: 576px) {
-							width: 100%;
-						}
-					}
+					font-size: 28px;
 				}
 			}
 		}

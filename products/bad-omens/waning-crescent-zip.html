@@ -68,7 +68,7 @@
 										</li>
 										<li class="dropdown-item">
 											<a
-												href="../../artists/bad-omens.html"
+												href="../../artist/bad-omens.html"
 												class="dropdown-link"
 												>Bad Omens</a
 											>
@@ -157,7 +157,7 @@
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="../../releases/index.html"
-										>Releases</a
+										>New Releases</a
 									>
 								</li>
 								<li class="nav-item">
@@ -224,19 +224,18 @@
 		<main>
 			<!-- Start of Product -->
 			<section>
-				<div class="container-fluid product-container">
+				<div class="container product-container">
 					<div class="row">
 						<div class="col-12 col-md-5 col-lg-6 product-info-container">
 							<div class="product-info-top">
 								<h3 class="product-name">Waning Crescent Zip-Up Hoodie</h3>
 								<h4 class="product-price">$45</h4>
 							</div>
-							<form class="clothing-form form">
+							<form class="form checkout-form">
 								<div class="form-top">
-									<div class="size-select-container">
+									<div class="size-select-container select-container">
 										<select
-											id="size-select"
-											class="form-select"
+											class="form-select size-select"
 											aria-label="Size Select"
 										>
 											<option selected="selected">Select a Size</option>
@@ -250,10 +249,9 @@
 									</div>
 								</div>
 								<div class="form-bottom">
-									<div class="quantity-select-container">
+									<div class="quantity-select-container select-container">
 										<select
-											id="quantity-select"
-											class="form-select"
+											class="form-select quantity-select"
 											aria-label="Quantity Select"
 										>
 											<option value="1">1</option>
@@ -278,24 +276,19 @@
 											<option value="20">20</option>
 										</select>
 									</div>
-									<button type="button" class="btn btn-outline-dark cart-btn">
+									<button type="button" class="btn btn-dark cart-btn">
 										Add To Cart
 									</button>
 								</div>
 							</form>
 							<div class="product-info-bottom">
-								<h3 class="product-description-title">
-									Bad Omens "Waning Crescent Zip-Up" hoodie now available.
-								</h3>
-								<ul class="product-description-list">
-									<li class="product-description-list-item">
-										100% Cotton Zip-Up Hoodie
-									</li>
-									<li class="product-description-list-item">
+								<ul class="list-group product-description-list">
+									<li class="list-group-item">100% Cotton Zip-Up Hoodie</li>
+									<li class="list-group-item">
 										Black Zip-Up Hoodie With White Ink Print On The Back And
 										Official Logo Print On The Front
 									</li>
-									<li class="product-description-list-item">
+									<li class="list-group-item">
 										Featuring The "Waning Crescent" Design From Bad Omens!
 									</li>
 								</ul>
@@ -329,45 +322,17 @@
 
 			<!-- Start of Related Products -->
 			<section>
-				<div class="container-fluid related-products-cards-container">
-					<h2 class="related-header">Related Products</h2>
+				<div class="container related-product-cards-container">
+					<div class="row">
+						<div class="col">
+							<h2 class="text-uppercase text-center related-product-header">
+								Related Products
+							</h2>
+						</div>
+					</div>
 					<div class="row">
 						<div
-							class="col col-sm-6 col-md-4 col-lg-3 merch-card related-products-card"
-						>
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../../images/merch/bad-omens/shirt1.jpeg" alt="" />
-								<div class="card-body">
-									<h4 class="card-title">Black Long Sleeve Shirt</h4>
-									<p class="card-text">$30</p>
-								</div>
-							</a>
-						</div>
-						<div
-							class="col col-sm-6 col-md-4 col-lg-3 merch-card related-products-card"
-						>
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../../images/merch/bad-omens/shirt4.jpeg" alt="" />
-								<div class="card-body">
-									<h4 class="card-title">Grey Short Sleeve Shirt</h4>
-									<p class="card-text">$30</p>
-								</div>
-							</a>
-						</div>
-						<div
-							class="col col-sm-6 col-md-4 col-lg-3 merch-card related-products-card"
-						>
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../../images/merch/bad-omens/vinyl2.jpeg" alt="" />
-								<div class="card-body">
-									<h4 class="card-title">Finding God Before God Finds Me</h4>
-									<p class="card-subtitle">Vinyl - Black and White</p>
-									<p class="card-text">$35</p>
-								</div>
-							</a>
-						</div>
-						<div
-							class="col col-sm-6 col-md-4 col-lg-3 merch-card related-products-card"
+							class="col col-sm-6 col-md-4 col-lg-3 product-card related-product-card"
 						>
 							<a
 								href="finding-god-before-god-finds-me-cd.html"
@@ -375,8 +340,43 @@
 							>
 								<img src="../../images/merch/bad-omens/album.jpg" alt="" />
 								<div class="card-body">
-									<h4 class="card-title">Finding God Before God Finds Me - CD</h4>
+									<h4 class="card-title">Finding God Before God Finds Me</h4>
+									<p class="card-subtitle">CD</p>
 									<p class="card-text">$10</p>
+								</div>
+							</a>
+						</div>
+						<div
+							class="col col-sm-6 col-md-4 col-lg-3 product-card related-product-card"
+						>
+							<a href="#" class="card border-0 rounded-0">
+								<img src="../../images/merch/bad-omens/shirt1.jpeg" alt="" />
+								<div class="card-body">
+									<h4 class="card-title">Bleeding Blossom Long Sleeve</h4>
+									<p class="card-text">$30</p>
+								</div>
+							</a>
+						</div>
+						<div
+							class="col col-sm-6 col-md-4 col-lg-3 product-card related-product-card"
+						>
+							<a href="#" class="card border-0 rounded-0">
+								<img src="../../images/merch/bad-omens/shirt4.jpeg" alt="" />
+								<div class="card-body">
+									<h4 class="card-title">The Fountain Tee</h4>
+									<p class="card-text">$30</p>
+								</div>
+							</a>
+						</div>
+						<div
+							class="col col-sm-6 col-md-4 col-lg-3 product-card related-product-card"
+						>
+							<a href="#" class="card border-0 rounded-0">
+								<img src="../../images/merch/bad-omens/vinyl2.jpeg" alt="" />
+								<div class="card-body">
+									<h4 class="card-title">Finding God Before God Finds Me</h4>
+									<p class="card-subtitle">Vinyl - Black and White</p>
+									<p class="card-text">$35</p>
 								</div>
 							</a>
 						</div>
@@ -389,7 +389,7 @@
 			<!-- Start of Community -->
 			<section>
 				<div class="container-fluid py-3 bg-dark community">
-					<div class="row px-4 py-3 community-container">
+					<div class="row px-3 py-3 community-container">
 						<div
 							class="
 								col-6
@@ -413,14 +413,12 @@
 											newsletter-form
 										"
 									>
-										<div>
-											<input
-												type="email"
-												class="form-control"
-												placeholder="Email Address"
-												required
-											/>
-										</div>
+										<input
+											type="email"
+											class="form-control"
+											placeholder="Email Address"
+											required
+										/>
 										<button
 											type="submit"
 											class="btn btn-outline-light text-uppercase"

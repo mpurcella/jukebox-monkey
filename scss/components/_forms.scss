@@ -1,0 +1,90 @@
+.newsletter-form {
+	input {
+		width: 50%;
+		font-size: 14px;
+		margin-right: 24px;
+
+		@media (max-width: 768px) {
+			width: 100%;
+			margin: 0 0 24px;
+		}
+	}
+}
+
+.checkout-form {
+	width: 100%;
+	margin-bottom: 80px;
+
+	@media (max-width: 991px) {
+		margin-bottom: 60px;
+	}
+
+	@media (max-width: 767px) {
+		margin-bottom: 80px;
+	}
+
+	.select-container::before {
+		position: absolute;
+		top: -6px;
+		left: 6px;
+		font-size: 12px;
+		font-weight: 700;
+		background-color: #fff;
+		padding: 0 8px;
+		z-index: 3;
+	}
+
+	select {
+		font-size: 12px;
+		text-transform: uppercase;
+		padding: 10px 12px;
+		box-sizing: border-box;
+	}
+
+	.form-top {
+		.size-select-container {
+			position: relative;
+			margin-bottom: 30px;
+
+			@media (max-width: 991px) {
+				margin-bottom: 20px;
+			}
+
+			&::before {
+				content: 'Size';
+			}
+
+			.size-select {
+				width: 100%;
+				border: 1px solid rgba(0, 0, 0, 0.6);
+			}
+		}
+	}
+
+	.form-bottom {
+		width: 100%;
+		display: flex;
+
+		.quantity-select-container {
+			position: relative;
+
+			&::before {
+				content: 'Qty';
+			}
+
+			.quantity-select {
+				width: 75px;
+				border: 1px solid rgba(0, 0, 0, 0.6);
+				margin-right: 25px;
+			}
+		}
+	}
+
+	.cart-btn {
+		width: 100%;
+		font-size: 12px;
+		text-transform: uppercase;
+		padding: 10px 12px;
+		box-sizing: border-box;
+	}
+}

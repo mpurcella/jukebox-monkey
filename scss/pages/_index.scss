@@ -1,27 +1,8 @@
 body {
-	&.active {
-		overflow-y: hidden;
-	}
-
-	.dark-bg {
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 50;
-		background-color: rgba(0, 0, 0, 0.7);
-		width: 100vw;
-		height: 100vh;
-		display: none;
-
-		&.active {
-			display: block;
-		}
-	}
-
 	.featured-videos::before {
 		@media (max-width: 992px) {
 			content: '';
-			width: 90%;
+			width: calc(100% - 32px);
 			height: 1px;
 			background-color: #e0e0e0;
 			position: absolute;
@@ -36,16 +17,8 @@ body {
 		position: relative;
 		margin: 40px 0;
 
-		.album-releases-container {
-			h2 {
-				margin-bottom: 40px;
-			}
-		}
-
 		.featured-videos-container {
 			h2 {
-				margin: 0 0 40px;
-
 				@media (max-width: 992px) {
 					margin: 40px 0;
 				}
@@ -57,6 +30,7 @@ body {
 			h2 {
 				font-size: 18px;
 				font-weight: 200;
+				margin-bottom: 40px;
 			}
 		}
 	}

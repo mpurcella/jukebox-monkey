@@ -62,128 +62,183 @@
 	}
 }
 
-.merch-card {
-	margin-bottom: 10px;
+.product-card {
+	display: flex;
+	justify-content: center;
+	padding: 0 15px;
 
 	.card {
 		justify-content: center;
 		text-decoration: none;
+		padding: 20px 20px 105px;
 
-		&:hover {
-			// box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-
-			img {
-				opacity: 0.3;
-			}
-
-			.card-body {
-				display: flex;
-				opacity: 1;
-			}
+		@media (max-width: 991px) {
+			padding: 10px 10px 105px;
 		}
 
-		img {
-			padding: 1rem;
-			transition: all 0.2s ease-in;
+		@media (max-width: 576px) {
+			padding: 20px;
+		}
+
+		&:hover {
+			box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 		}
 
 		.card-body {
-			position: absolute;
-			top: 0;
-			left: 0;
 			width: 100%;
-			height: 100%;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			opacity: 0;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
 			color: $primary-color;
 			text-transform: uppercase;
 			text-align: center;
-			padding: 0.5rem 1rem;
-			transition: all 0.2s ease-in;
+			padding: 5px 10px;
+
+			@media (max-width: 575px) {
+				position: unset;
+				left: unset;
+				top: unset;
+				transform: unset;
+			}
 
 			.card-title {
-				font-size: 18px;
-				font-weight: 700;
-				margin-bottom: 0.75rem;
-
-				@media (max-width: 1200px) {
-					font-size: 16px;
-				}
-
-				@media (max-width: 991px) {
-					font-size: 18px;
-				}
-
-				@media (max-width: 768px) {
-					font-size: 16px;
-				}
-
-				@media (max-width: 576px) {
-					font-size: 18px;
-				}
+				font-weight: 900;
+				line-height: 1.25;
+				margin-bottom: 10px;
 			}
 
 			.card-subtitle {
-				font-size: 14px;
-				font-weight: 500;
+				font-weight: 300;
 				margin-top: 0;
-				margin-bottom: 0.75rem;
-
-				@media (max-width: 1200px) {
-					font-size: 12px;
-				}
-
-				@media (max-width: 991px) {
-					font-size: 14px;
-				}
-
-				@media (max-width: 768px) {
-					font-size: 12px;
-				}
-
-				@media (max-width: 576px) {
-					font-size: 14px;
-				}
+				margin-bottom: 10px;
 			}
 
 			.card-text {
-				font-size: 14px;
-				font-weight: 500;
-
-				@media (max-width: 1200px) {
-					font-size: 12px;
-				}
-
-				@media (max-width: 991px) {
-					font-size: 14px;
-				}
-
-				@media (max-width: 768px) {
-					font-size: 12px;
-				}
-
-				@media (max-width: 576px) {
-					font-size: 14px;
-				}
+				font-weight: 300;
 			}
 		}
 	}
 }
 
-.related-products-card {
-	.card-title {
-		font-size: 16px;
+.merch-card {
+	margin-bottom: 20px;
+
+	.card-body {
+		top: 335px;
+
+		@media (max-width: 1198px) {
+			top: 265px;
+		}
+
+		@media (max-width: 991px) {
+			top: 332.344px;
+		}
+
+		@media (max-width: 767px) {
+			top: 252.344px;
+		}
+
+		.card-title {
+			font-size: 14px;
+
+			@media (max-width: 1198px) {
+				font-size: 13px;
+			}
+
+			@media (max-width: 767px) {
+				font-size: 12px;
+			}
+
+			@media (max-width: 576px) {
+				font-size: 14px;
+			}
+		}
+
+		.card-subtitle {
+			font-size: 12px;
+
+			@media (max-width: 767px) {
+				font-size: 11px;
+			}
+
+			@media (max-width: 576px) {
+				font-size: 12px;
+			}
+		}
+
+		.card-text {
+			font-size: 12px;
+
+			@media (max-width: 767px) {
+				font-size: 11px;
+			}
+
+			@media (max-width: 576px) {
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+.related-product-card {
+	@media (max-width: 767px) {
+		margin-bottom: 20px;
 	}
 
-	.card-subtitle {
-		font-size: 12px;
-	}
+	.card-body {
+		top: 248.844px;
 
-	.card-price {
-		font-size: 12px;
+		@media (max-width: 1198px) {
+			top: 196.344px;
+		}
+
+		@media (max-width: 991px) {
+			top: 195px;
+		}
+
+		@media (max-width: 767px) {
+			top: 222.344px;
+		}
+
+		.card-title {
+			font-size: 14px;
+
+			@media (max-width: 1198px) {
+				font-size: 13px;
+			}
+
+			@media (max-width: 767px) {
+				font-size: 12px;
+			}
+
+			@media (max-width: 576px) {
+				font-size: 14px;
+			}
+		}
+
+		.card-subtitle {
+			font-size: 12px;
+
+			@media (max-width: 767px) {
+				font-size: 11px;
+			}
+
+			@media (max-width: 576px) {
+				font-size: 12px;
+			}
+		}
+
+		.card-text {
+			font-size: 12px;
+
+			@media (max-width: 767px) {
+				font-size: 11px;
+			}
+
+			@media (max-width: 576px) {
+				font-size: 12px;
+			}
+		}
 	}
 }
 

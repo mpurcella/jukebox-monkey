@@ -49,7 +49,7 @@ $(document).ready(function () {
 	// Albums Carousel
 	$('.albums-carousel').owlCarousel({
 		loop: true,
-		margin: 15,
+		margin: 6,
 		nav: true,
 		navSpeed: 550,
 		dots: false,
@@ -57,15 +57,16 @@ $(document).ready(function () {
 		responsive: {
 			0: {
 				items: 1,
-				stagePadding: 75
+				stagePadding: 55,
+				margin: 8
 			},
 			501: {
 				items: 2,
-				stagePadding: 75
+				stagePadding: 55
 			},
 			577: {
 				items: 2,
-				stagePadding: 75
+				stagePadding: 65
 			},
 			769: {
 				items: 2,
@@ -73,7 +74,7 @@ $(document).ready(function () {
 			},
 			1101: {
 				items: 4,
-				stagePadding: 85
+				stagePadding: 75
 			}
 		}
 	});
@@ -82,30 +83,27 @@ $(document).ready(function () {
 	$('.videos-carousel').owlCarousel({
 		loop: true,
 		items: 1,
-		margin: 15,
+		margin: 6,
 		nav: true,
 		navSpeed: 550,
 		dots: false,
 		navText: [previcon, nexticon],
 		responsive: {
 			0: {
-				items: 1,
 				margin: 0,
 				stagePadding: 0
 			},
 			769: {
-				items: 1,
 				stagePadding: 75
 			},
 			1101: {
 				items: 2,
-				stagePadding: 85
+				stagePadding: 75
 			}
 		}
 	});
 
-	// Modal Video Player
-
+	// Modal Video Players
 	// TAS
 	$('#playTAS').click(function () {
 		$('#modalVideoTAS').modal('show');
