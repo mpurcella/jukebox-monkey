@@ -49,7 +49,7 @@
 							<ul class="navbar-nav nav-list">
 								<li class="nav-item dropdown-li">
 									<a
-										class="nav-link artist-menu-link"
+										class="nav-link menu-link artist-menu-link"
 										href="../artists/index.html"
 									>
 										Artists
@@ -57,7 +57,7 @@
 											><i class="fas fa-chevron-down"></i>
 										</span>
 									</a>
-									<ul class="dropdown">
+									<ul class="dropdown artist-dropdown">
 										<li class="dropdown-item">
 											<a href="#" class="dropdown-link">The Acacia Strain</a>
 										</li>
@@ -164,8 +164,93 @@
 								<li class="nav-item">
 									<a class="nav-link" href="#">Videos</a>
 								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Store</a>
+								<li class="nav-item dropdown-li">
+									<a
+										class="nav-link menu-link store-menu-link"
+										href="../store/index.html"
+										>Store
+										<span class="dropdown-arrow"
+											><i class="fas fa-chevron-down"></i>
+										</span>
+									</a>
+									<ul class="dropdown store-dropdown">
+										<li class="dropdown-column">
+											<a class="dropdown-header" href="#">Bundles</a>
+										</li>
+										<li class="dropdown-column">
+											<a class="dropdown-header" href="#">Music</a>
+											<ul>
+												<li class="dropdown-item">
+													<a class="dropdown-link" href="#">All Music</a>
+												</li>
+												<li class="dropdown-item">
+													<a class="dropdown-link" href="#">CD's</a>
+												</li>
+												<li class="dropdown-item">
+													<a class="dropdown-link" href="#">Vinyl</a>
+												</li>
+												<li class="dropdown-item">
+													<a class="dropdown-link" href="#"
+														>Limited Edition Vinyl</a
+													>
+												</li>
+												<li class="dropdown-item">
+													<a class="dropdown-link" href="#">Cassettes</a>
+												</li>
+											</ul>
+										</li>
+										<li class="dropdown-column">
+											<a class="dropdown-header" href="#">Apparel</a>
+											<ul>
+												<li class="dropdown-item">
+													<a class="dropdown-link" href="#">T-Shirts</a>
+												</li>
+												<li class="dropdown-item">
+													<a class="dropdown-link" href="#">Tank Tops</a>
+												</li>
+												<li class="dropdown-item">
+													<a class="dropdown-link" href="#">Hoodies</a>
+												</li>
+												<li class="dropdown-item">
+													<a class="dropdown-link" href="#">Zip-Ups</a>
+												</li>
+												<li class="dropdown-item">
+													<a class="dropdown-link" href="#">Crew Necks</a>
+												</li>
+												<li class="dropdown-item">
+													<a class="dropdown-link" href="#">Outerwear</a>
+												</li>
+												<li class="dropdown-item">
+													<a class="dropdown-link" href="#">Bottoms</a>
+												</li>
+											</ul>
+										</li>
+										<li class="dropdown-column">
+											<a class="dropdown-header" href="#">Accessories</a>
+											<ul>
+												<li class="dropdown-item">
+													<a class="dropdown-link" href="#">Posters</a>
+												</li>
+												<li class="dropdown-item">
+													<a class="dropdown-link" href="#">Stickers</a>
+												</li>
+												<li class="dropdown-item">
+													<a class="dropdown-link" href="#">Hats</a>
+												</li>
+												<li class="dropdown-item">
+													<a class="dropdown-link" href="#">Jewelry</a>
+												</li>
+												<li class="dropdown-item">
+													<a class="dropdown-link" href="#"
+														>Miscellaneous</a
+													>
+												</li>
+											</ul>
+										</li>
+										<li class="dropdown-column">
+											<a class="dropdown-header" href="#">Clearance</a>
+										</li>
+									</ul>
 								</li>
 							</ul>
 							<ul class="navbar-nav social-list">
@@ -223,11 +308,11 @@
 		</header>
 
 		<main>
-			<!-- Start of Cards -->
+			<!-- Start of Video Cards -->
 			<section>
-				<div class="container video-cards-container">
+				<div class="container video-cards-container container-margin">
 					<div class="row">
-						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 video-card">
+						<div class="col-12 col-lg-6 video-card">
 							<div
 								class="card border-0"
 								data-bs-toggle="modal"
@@ -251,7 +336,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 video-card">
+						<div class="col-12 col-lg-6 video-card">
 							<div
 								class="card border-0"
 								data-bs-toggle="modal"
@@ -272,7 +357,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 video-card">
+						<div class="col-12 col-lg-6 video-card">
 							<div
 								class="card border-0"
 								data-bs-toggle="modal"
@@ -293,7 +378,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 video-card">
+						<div class="col-12 col-lg-6 video-card">
 							<div
 								class="card border-0"
 								data-bs-toggle="modal"
@@ -314,7 +399,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 video-card">
+						<div class="col-12 col-lg-6 video-card">
 							<div
 								class="card border-0"
 								data-bs-toggle="modal"
@@ -335,7 +420,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 video-card">
+						<div class="col-12 col-lg-6 video-card">
 							<div
 								class="card border-0"
 								data-bs-toggle="modal"
@@ -356,7 +441,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 video-card">
+						<div class="col-12 col-lg-6 video-card">
 							<div
 								class="card border-0"
 								data-bs-toggle="modal"
@@ -377,7 +462,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 video-card">
+						<div class="col-12 col-lg-6 video-card">
 							<div
 								class="card border-0"
 								data-bs-toggle="modal"
@@ -398,7 +483,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 video-card">
+						<div class="col-12 col-lg-6 video-card">
 							<div
 								class="card border-0"
 								data-bs-toggle="modal"
@@ -423,16 +508,15 @@
 					</div>
 				</div>
 			</section>
-			<!-- End of Cards -->
+			<!-- End of Video Cards -->
 
 			<!-- Start of Community Section -->
 			<section>
-				<div class="container-fluid py-3 bg-dark community">
-					<div class="row px-3 py-3 community-container">
+				<div class="container-fluid py-5 bg-dark community">
+					<div class="row community-container">
 						<div
 							class="
 								col-6
-								py-5
 								d-flex
 								flex-column
 								justify-content-center
@@ -471,8 +555,6 @@
 						<div
 							class="
 								col-6
-								px-3
-								py-5
 								d-flex
 								flex-column
 								justify-content-center

@@ -149,6 +149,15 @@ $(document).ready(function () {
 		$('#modalVideoTGI iframe').attr('src', $('#modalVideoTGI iframe').attr('src'));
 	});
 
+	// MMI
+	$('#playMMI').click(function () {
+		$('#modalVideoMMI').modal('show');
+	});
+
+	$('#modalVideoMMI').on('hidden.bs.modal', function (e) {
+		$('#modalVideoMMI iframe').attr('src', $('#modalVideoMMI iframe').attr('src'));
+	});
+
 	// S
 	$('#playS').click(function () {
 		$('#modalVideoS').modal('show');

@@ -12,9 +12,9 @@
 @import 'components/modals';
 @import 'components/searchbox';
 
-@import 'layout/darkBackground';
 @import 'layout/community';
-@import 'layout/containerWidth';
+@import 'layout/containerMargin';
+@import 'layout/darkBackground';
 @import 'layout/footer';
 @import 'layout/header';
 @import 'layout/hiddenScroll';
@@ -22,8 +22,6 @@
 @import 'layout/wrapper';
 
 @import 'pages/artist';
-@import 'pages/artists';
 @import 'pages/index';
 @import 'pages/product';
-@import 'pages/releases';
 @import 'pages/videos';

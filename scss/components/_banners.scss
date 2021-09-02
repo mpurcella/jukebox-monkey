@@ -29,6 +29,7 @@
 
 		.artist-name {
 			font-size: 40px;
+			font-weight: 700;
 			margin-bottom: 15px;
 
 			@media (max-width: 576px) {
@@ -44,7 +45,7 @@
 			transition: all 0.3s;
 
 			&:hover {
-				color: $tertiary-color;
+				letter-spacing: 2px;
 			}
 
 			@media (max-width: 576px) {

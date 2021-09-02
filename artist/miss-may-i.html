@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Artists</title>
+		<title>Miss May I</title>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -48,7 +48,10 @@
 						<div class="main-nav h-100">
 							<ul class="navbar-nav nav-list">
 								<li class="nav-item dropdown-li">
-									<a class="nav-link menu-link artist-menu-link" href="#">
+									<a
+										class="nav-link menu-link artist-menu-link"
+										href="../artists/index.html"
+									>
 										Artists
 										<span class="dropdown-arrow"
 											><i class="fas fa-chevron-down"></i>
@@ -64,12 +67,9 @@
 											>
 										</li>
 										<li class="dropdown-item">
-											<a
-												href="../artist/bad-omens.html"
-												class="dropdown-link"
+											<a href="bad-omens.html" class="dropdown-link"
+												>Bad Omens</a
 											>
-												Bad Omens
-											</a>
 										</li>
 										<li class="dropdown-item">
 											<a href="#" class="dropdown-link">Bent Life</a>
@@ -129,11 +129,7 @@
 											<a href="#" class="dropdown-link">Job For A Cowboy</a>
 										</li>
 										<li class="dropdown-item">
-											<a
-												href="../artist/miss-may-i.html"
-												class="dropdown-link"
-												>Miss May I</a
-											>
+											<a href="#" class="dropdown-link">Miss May I</a>
 										</li>
 										<li class="dropdown-item">
 											<a href="#" class="dropdown-link"
@@ -309,230 +305,189 @@
 		</header>
 
 		<main>
-			<!-- Start of Artist Cards -->
+			<!-- Start of Artist -->
 			<section>
-				<div class="container artist-cards-container container-margin">
+				<!-- Start of Artist Banner -->
+				<div class="artist-banner">
+					<img src="../images/banners/banner6.jpeg" class="artist-banner-img" alt="" />
+					<div class="artist-banner-overlay">
+						<h2 class="artist-name">Miss May I</h2>
+						<a href="https://missmayimusic.com" class="artist-site"
+							>www.missmayimusic.com</a
+						>
+						<ul class="artist-social">
+							<li class="artist-social-item">
+								<a class="artist-social-link" href="#"
+									><i class="fab fa-facebook-f"></i
+								></a>
+							</li>
+							<li class="artist-social-item">
+								<a class="artist-social-link" href="#"
+									><i class="fab fa-instagram"></i
+								></a>
+							</li>
+							<li class="artist-social-item">
+								<a class="artist-social-link" href="#">
+									<i class="fab fa-twitter"></i>
+								</a>
+							</li>
+							<li class="artist-social-item">
+								<a class="artist-social-link" href="#">
+									<i class="fab fa-spotify"></i>
+								</a>
+							</li>
+							<li class="artist-social-item">
+								<a class="artist-social-link" href="#">
+									<i class="fab fa-youtube"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- End of Artist Banner -->
+
+				<!-- Start of Artist Bio -->
+				<div class="container artist-bio">
 					<div class="row">
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
+						<div class="col">
+							<p class="artist-bio-text">
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae
+								ea maxime neque. Recusandae quidem laboriosam soluta, aspernatur
+								culpa facere et quod provident ea commodi qui repellendus ratione
+								voluptatibus minus assumenda deserunt optio ipsa fugit magni?
+								Similique culpa nulla iusto veritatis blanditiis aut repellat,
+								fugiat facere voluptates beatae minus illo doloribus!
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- End of Artist Bio -->
+			</section>
+			<!-- End of Artist -->
+
+			<!-- Start of Artist Merch -->
+			<section>
+				<div class="container merch-cards-container">
+					<div class="row">
+						<div class="col-sm-12 col-md-6 col-lg-4 product-card merch-card">
+							<a
+								href="../products/miss-may-i/gargoyle-long-sleeve.html"
+								class="card border-0 rounded-0"
+							>
+								<img src="../images/merch/miss-may-i/shirt1.jpeg" alt="" />
+								<div class="card-body">
+									<h4 class="card-title">Gargoyle Long Sleeve</h4>
+									<p class="card-text">$30</p>
+								</div>
+							</a>
+						</div>
+						<div class="col-sm-12 col-md-6 col-lg-4 product-card merch-card">
 							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/tac.jpeg" class="rounded-0" alt="" />
+								<img src="../images/merch/miss-may-i/shirt2.jpeg" alt="" />
 								<div class="card-body">
-									<h5 class="card-title">The Acacia Strain</h5>
+									<h4 class="card-title">Branded Tee</h4>
+									<p class="card-text">$25</p>
 								</div>
 							</a>
 						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
+						<div class="col-sm-12 col-md-6 col-lg-4 product-card merch-card">
 							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/attoj.png" class="rounded-0" alt="" />
+								<img src="../images/merch/miss-may-i/shirt3.jpeg" alt="" />
 								<div class="card-body">
-									<h5 class="card-text">At The Throne of Judgment</h5>
+									<h4 class="card-title">Skull Serpent Tee</h4>
+									<p class="card-text">$25</p>
 								</div>
 							</a>
 						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
-							<a href="../artist/bad-omens.html" class="card border-0 rounded-0">
-								<img src="../images/artists/bo.jpeg" class="rounded-0" alt="" />
-								<div class="card-body">
-									<h5 class="card-text">Bad Omens</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
+						<div class="col-sm-12 col-md-6 col-lg-4 product-card merch-card">
 							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/bl.jpeg" class="rounded-0" alt="" />
+								<img src="../images/merch/miss-may-i/shirt4.jpeg" alt="" />
 								<div class="card-body">
-									<h5 class="card-text">Bent Life</h5>
+									<h4 class="card-title">Pestilence Tee</h4>
+									<p class="card-text">$25</p>
 								</div>
 							</a>
 						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
+						<div class="col-sm-12 col-md-6 col-lg-4 product-card merch-card">
 							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/bmth.jpeg" class="rounded-0" alt="" />
+								<img src="../images/merch/miss-may-i/shirt5.jpeg" alt="" />
 								<div class="card-body">
-									<h5 class="card-text">Bring Me The Horizon</h5>
+									<h4 class="card-title">Nowhere To Hide Long Sleeve</h4>
+									<p class="card-text">$30</p>
 								</div>
 							</a>
 						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
+						<div class="col-sm-12 col-md-6 col-lg-4 product-card merch-card">
 							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/c.jpeg" class="rounded-0" alt="" />
+								<img src="../images/merch/miss-may-i/pullover1.jpeg" alt="" />
 								<div class="card-body">
-									<h5 class="card-text">Chiodos</h5>
+									<h4 class="card-title">Death Metal Logo Pullover</h4>
+									<p class="card-text">$45</p>
 								</div>
 							</a>
 						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
+						<div class="col-sm-12 col-md-6 col-lg-4 product-card merch-card">
 							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/ck.jpeg" class="rounded-0" alt="" />
+								<img src="../images/merch/miss-may-i/shorts1.jpeg" alt="" />
 								<div class="card-body">
-									<h5 class="card-text">Comeback Kid</h5>
+									<h4 class="card-title">Deathless Camo Mesh Shorts</h4>
+									<p class="card-text">$30</p>
 								</div>
 							</a>
 						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
+						<div class="col-sm-12 col-md-6 col-lg-4 product-card merch-card">
+							<a
+								href="../products/miss-may-i/deathless-vinyl.html"
+								class="card border-0 rounded-0"
+							>
+								<img src="../images/merch/miss-may-i/vinyl1.jpeg" alt="" />
+								<div class="card-body">
+									<h4 class="card-title">Deathless</h4>
+									<p class="card-subtitle">Vinyl - Clear w/ Black Splatter</p>
+									<p class="card-text">$35</p>
+								</div>
+							</a>
+						</div>
+						<div class="col-sm-12 col-md-6 col-lg-4 product-card merch-card">
+							<a
+								href="../products/bad-omens/finding-god-before-god-finds-me-cd.html"
+								class="card border-0 rounded-0"
+							>
+								<img src="../images/merch/miss-may-i/vinyl2.jpeg" alt="" />
+								<div class="card-body">
+									<h4 class="card-title">Deathless</h4>
+									<p class="card-subtitle">Vinyl - White</p>
+									<p class="card-text">$35</p>
+								</div>
+							</a>
+						</div>
+						<div class="col-sm-12 col-md-6 col-lg-4 product-card merch-card">
 							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/cte.jpeg" class="rounded-0" alt="" />
+								<img src="../images/merch/miss-may-i/beanie1.jpeg" alt="" />
 								<div class="card-body">
-									<h5 class="card-text">Crown The Empire</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/dgd.jpeg" class="rounded-0" alt="" />
-								<div class="card-body">
-									<h5 class="card-text">Dance Gavin Dance</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/di.jpeg" class="rounded-0" alt="" />
-								<div class="card-body">
-									<h5 class="card-text">Despised Icon</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/tdwp.jpeg" class="rounded-0" alt="" />
-								<div class="card-body">
-									<h5 class="card-text">The Devil Wears Prada</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/ddg.jpeg" class="rounded-0" alt="" />
-								<div class="card-body">
-									<h5 class="card-text">Drop Dead, Gorgeous</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/dk.jpeg" class="rounded-0" alt="" />
-								<div class="card-body">
-									<h5 class="card-text">Dustin Kensrue</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/e.jpeg" class="rounded-0" alt="" />
-								<div class="card-body">
-									<h5 class="card-text">Elysia</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/etid.jpeg" class="rounded-0" alt="" />
-								<div class="card-body">
-									<h5 class="card-text">Every Time I Die</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/fb.jpeg" class="rounded-0" alt="" />
-								<div class="card-body">
-									<h5 class="card-text">First Blood</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/tgi.jpeg" class="rounded-0" alt="" />
-								<div class="card-body">
-									<h5 class="card-text">The Ghost Inside</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/ahfh.jpeg" class="rounded-0" alt="" />
-								<div class="card-body">
-									<h5 class="card-text">A Hope For Home</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/kp.jpeg" class="rounded-0" alt="" />
-								<div class="card-body">
-									<h5 class="card-text">Knuckle Puck</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/jfac.jpeg" class="rounded-0" alt="" />
-								<div class="card-body">
-									<h5 class="card-text">Job For A Cowboy</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
-							<a href="../artist/miss-may-i.html" class="card border-0 rounded-0">
-								<img src="../images/artists/mmi.jpeg" class="rounded-0" alt="" />
-								<div class="card-body">
-									<h5 class="card-text">Miss May I</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/mcs.jpeg" class="rounded-0" alt="" />
-								<div class="card-body">
-									<h5 class="card-text">Motion City Soundtrack</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/s.jpeg" class="rounded-0" alt="" />
-								<div class="card-body">
-									<h5 class="card-text">Saosin</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/sf.jpeg" class="rounded-0" alt="" />
-								<div class="card-body">
-									<h5 class="card-text">Senses Fail</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/asl.jpeg" class="rounded-0" alt="" />
-								<div class="card-body">
-									<h5 class="card-text">A Static Lullaby</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/t.jpeg" class="rounded-0" alt="" />
-								<div class="card-body">
-									<h5 class="card-text">Thrice</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-12 col-md-6 col-xl-4 artist-card">
-							<a href="#" class="card border-0 rounded-0">
-								<img src="../images/artists/uo.jpeg" class="rounded-0" alt="" />
-								<div class="card-body">
-									<h5 class="card-text">Underoath</h5>
+									<h4 class="card-title">Death Metal Logo Beanie</h4>
+									<p class="card-text">$15</p>
 								</div>
 							</a>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- End of Artist Cards -->
+			<!-- End of Artist Merch -->
+
+			<!-- Start of Artist Video -->
+			<section>
+				<div
+					class="artist-video-container"
+					data-bs-toggle="modal"
+					data-bs-target="#modalVideoMMI"
+					id="playMMI"
+				>
+					<img src="../images/videos/mmi-vid.jpeg" alt="" />
+					<i class="far fa-play-circle"></i>
+				</div>
+			</section>
+			<!-- End of Artist Video -->
 
 			<!-- Start of Community -->
 			<section>
@@ -1374,6 +1329,34 @@
 			</div>
 		</div>
 		<!-- End of Street Team Modal -->
+
+		<!-- Start of Video Modal -->
+		<!-- Start of BO Modal -->
+		<div
+			class="modal fade"
+			id="modalVideoMMI"
+			tabindex="-1"
+			aria-labelledby="modalVideoMMILabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content position-relative">
+					<div class="modal-body p-0">
+						<div class="ratio ratio-16x9">
+							<iframe
+								src="https://www.youtube.com/embed/0KmJS89v9dw"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+							></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End of BO Modal -->
+		<!-- End of Video Modal -->
 
 		<!-- End of Modals -->
 
