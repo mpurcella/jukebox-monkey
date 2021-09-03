@@ -55,6 +55,7 @@
 			text-align: center;
 			font-weight: 200;
 			font-size: 16px;
+			font-family: 'Montserrat', sans-serif;
 
 			@media (max-width: 1399px) {
 				font-size: 15px;
@@ -127,6 +128,7 @@
 
 			.card-title {
 				font-size: 17px;
+				font-family: 'Montserrat', sans-serif;
 				font-weight: 200;
 				margin-bottom: 15px;
 
@@ -157,7 +159,6 @@
 			}
 
 			.card-subtitle {
-				font-family: 'Oxanium', cursive;
 				font-size: 13px;
 				font-weight: 700;
 				margin-top: 0;
@@ -276,6 +277,7 @@
 
 			.card-title {
 				font-size: 22px;
+				font-family: 'Montserrat', sans-serif;
 				font-weight: 200;
 				margin-bottom: 20px;
 
@@ -302,7 +304,6 @@
 			}
 
 			.card-text {
-				font-family: 'Oxanium', cursive;
 				font-size: 18px;
 				font-weight: 700;
 
@@ -364,7 +365,7 @@
 	.card {
 		justify-content: center;
 		text-decoration: none;
-		padding: 15px 15px 100px;
+		padding: 15px 15px 110px;
 
 		@media (max-width: 575px) {
 			padding: 20px 20px 50px;
@@ -396,7 +397,7 @@
 			}
 
 			.card-title {
-				font-weight: 900;
+				font-weight: 800;
 				line-height: 1.25;
 				margin-bottom: 10px;
 			}
@@ -496,7 +497,12 @@
 	}
 }
 
-.related-product-card {
+.related-product-card,
+.featured-bundle-card,
+.featured-music-card,
+.featured-apparel-card,
+.featured-accessories-card,
+.featured-clearance-card {
 	@media (max-width: 991px) {
 		margin-bottom: 20px;
 	}
@@ -535,22 +541,22 @@
 		}
 
 		.card-title {
-			font-size: 15px;
+			font-size: 14px;
 
 			@media (max-width: 1399px) {
-				font-size: 14px;
+				font-size: 13.5px;
 			}
 
 			@media (max-width: 1198px) {
 				font-size: 15px;
 			}
 
-			@media (max-width: 991px) {
-				font-size: 13px;
-			}
+			// @media (max-width: 991px) {
+			// 	font-size: 15px;
+			// }
 
 			@media (max-width: 767px) {
-				font-size: 14px;
+				font-size: 13.5px;
 			}
 
 			@media (max-width: 576px) {
@@ -562,23 +568,23 @@
 			font-size: 13px;
 
 			@media (max-width: 1399px) {
-				font-size: 12px;
+				font-size: 12.5px;
 			}
 
 			@media (max-width: 1198px) {
-				font-size: 13px;
+				font-size: 14px;
 			}
 
-			@media (max-width: 991px) {
-				font-size: 11px;
-			}
+			// @media (max-width: 991px) {
+			// 	font-size: 13px;
+			// }
 
 			@media (max-width: 767px) {
-				font-size: 12px;
+				font-size: 12.5px;
 			}
 
 			@media (max-width: 576px) {
-				font-size: 14px;
+				font-size: 15px;
 			}
 		}
 
@@ -586,23 +592,29 @@
 			font-size: 12px;
 
 			@media (max-width: 1399px) {
-				font-size: 11px;
+				font-size: 11.5px;
 			}
 
 			@media (max-width: 1198px) {
-				font-size: 12px;
+				font-size: 13px;
 			}
 
-			@media (max-width: 991px) {
-				font-size: 10px;
-			}
+			// @media (max-width: 991px) {
+			// 	font-size: 12px;
+			// }
 
 			@media (max-width: 767px) {
-				font-size: 11px;
+				font-size: 11.5px;
 			}
 
 			@media (max-width: 576px) {
-				font-size: 13px;
+				font-size: 14px;
+			}
+
+			span {
+				color: orangered;
+				text-decoration: line-through;
+				margin-right: 10px;
 			}
 		}
 	}

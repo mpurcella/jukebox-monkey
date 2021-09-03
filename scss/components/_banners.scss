@@ -76,3 +76,20 @@
 		}
 	}
 }
+
+.sold-out-banner-container {
+	width: calc(100% - 30px);
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+
+	.sold-out-banner {
+		color: $secondary-color;
+		font-weight: 900;
+		background-color: rgba(170, 0, 0, 0.9);
+		text-transform: uppercase;
+		text-align: center;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+}
