@@ -1106,6 +1106,7 @@ table {
 }
 .banners .owl-carousel .owl-stage-outer .slide-img-container .banner-album-overlay .overlay-left .overlay-artist {
   font-size: 40px;
+  font-family: "Montserrat", sans-serif;
   font-weight: 200;
   margin-bottom: 8px;
 }
@@ -1366,6 +1367,7 @@ table {
 .album-releases .owl-carousel .owl-stage-outer .owl-item.active .slide-img-container .img-overlay .slide-artist,
 .featured-videos .owl-carousel .owl-stage-outer .owl-item.active .slide-img-container .img-overlay .slide-artist {
   font-size: 18px;
+  font-family: "Montserrat", sans-serif;
   font-weight: 200;
   margin-bottom: 15px;
 }
@@ -1597,6 +1599,7 @@ table {
 }
 .featured-videos .owl-item.active .img-overlay .video-artist {
   font-size: 20px;
+  font-family: "Montserrat", sans-serif;
   font-weight: 200;
   margin-bottom: 20px;
 }
