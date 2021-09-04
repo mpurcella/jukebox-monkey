@@ -375,6 +375,7 @@ table {
 .new-releases-card .card img {
   border: 1px solid #e0e0e0;
   box-sizing: border-box;
+  width: 100%;
 }
 .new-releases-card .card .card-body {
   width: 100%;
