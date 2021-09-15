@@ -209,7 +209,11 @@
 											</ul>
 										</li>
 										<li class="dropdown-column">
-											<a class="dropdown-header" href="#">Apparel</a>
+											<a
+												class="dropdown-header"
+												href="store/apparel/index.html"
+												>Apparel</a
+											>
 											<ul>
 												<li class="dropdown-item">
 													<a class="dropdown-link" href="#">T-Shirts</a>
@@ -296,11 +300,14 @@
 							</form>
 							<ul class="navbar-nav cart-container">
 								<li class="nav-item">
-									<a class="nav-link" href="#">
+									<a
+										class="nav-link"
+										data-bs-toggle="modal"
+										data-bs-target="#cartModal"
+										href="#"
+									>
 										<i class="fas fa-shopping-cart"></i>
-										<p class="cart-total">
-											(<span class="cart-number">0</span>)
-										</p>
+										<p class="cart-total">3</p>
 									</a>
 								</li>
 							</ul>
@@ -743,6 +750,7 @@
 		<div class="dark-bg"></div>
 
 		<!-- Start of Modals -->
+
 		<!-- Start of Contact Modal -->
 		<div
 			class="modal fade"
@@ -820,7 +828,7 @@
 									required
 								></textarea>
 							</div>
-							<div class="d-flex justify-content-end">
+							<div class="d-flex justify-content-end button-container">
 								<button type="submit" class="btn btn-outline-dark text-uppercase">
 									Send
 								</button>
@@ -907,7 +915,7 @@
 									required
 								></textarea>
 							</div>
-							<div class="d-flex justify-content-end">
+							<div class="d-flex justify-content-end button-container">
 								<button type="submit" class="btn btn-outline-dark text-uppercase">
 									Send
 								</button>
@@ -1432,9 +1440,9 @@
 									required
 								></textarea>
 							</div>
-							<div class="d-flex justify-content-end">
+							<div class="d-flex justify-content-end button-container">
 								<button type="submit" class="btn btn-outline-dark text-uppercase">
-									Submit
+									Send
 								</button>
 							</div>
 						</form>
@@ -1443,6 +1451,192 @@
 			</div>
 		</div>
 		<!-- End of Street Team Modal -->
+
+		<!-- Start of Cart Modal -->
+		<div
+			class="modal fade"
+			id="cartModal"
+			tabindex="-1"
+			aria-labelledby="cartModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5
+							class="modal-title text-uppercase lh-1 text-center cart-header"
+							id="cartModalLabel"
+						>
+							Your Cart
+						</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-12 cart-item-container">
+									<div class="row">
+										<div
+											class="col-4 col-sm-3 col-lg-2 cart-col item-image-col"
+										>
+											<img src="images/merch/bad-omens/zipup1.jpeg" alt="" />
+										</div>
+										<div class="col-8 col-sm-6 col-lg-6 cart-col item-info-col">
+											<h2 class="cart-item-artist">Bad Omens</h2>
+											<p class="cart-item-name">Waning Crescent Zip</p>
+											<p class="cart-item-description">Medium</p>
+										</div>
+										<div
+											class="
+												col-8 col-sm-3 col-lg-3
+												cart-col
+												item-quantity-col
+											"
+										>
+											<div class="quantity-select-container">
+												<select
+													class="form-select quantity-select"
+													aria-label="Quantity Select"
+												>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
+													<option value="11">11</option>
+													<option value="12">12</option>
+													<option value="13">13</option>
+													<option value="14">14</option>
+													<option value="15">15</option>
+													<option value="16">16</option>
+													<option value="17">17</option>
+													<option value="18">18</option>
+													<option value="19">19</option>
+													<option value="20">20</option>
+												</select>
+											</div>
+											<p class="cart-item-price">$45</p>
+										</div>
+										<div
+											class="
+												col-4 col-sm-12 col-lg-1
+												d-flex
+												align-items-center
+												remove-btn-container
+											"
+										>
+											<i
+												class="fas fa-times-circle"
+												data-bs-toggle="tooltip"
+												data-bs-placement="top"
+												title="Remove From Cart"
+											></i>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 cart-item-container">
+									<div class="row">
+										<div
+											class="col-4 col-sm-3 col-lg-2 cart-col item-image-col"
+										>
+											<img src="images/merch/miss-may-i/vinyl1.jpeg" alt="" />
+										</div>
+										<div class="col-8 col-sm-6 col-lg-6 cart-col item-info-col">
+											<h2 class="cart-item-artist">Miss May I</h2>
+											<p class="cart-item-name">Deathless</p>
+											<p class="cart-item-description">
+												Vinyl - Clear w/ Black Splatter
+											</p>
+										</div>
+										<div
+											class="
+												col-8 col-sm-3 col-lg-3
+												cart-col
+												item-quantity-col
+											"
+										>
+											<div class="quantity-select-container">
+												<select
+													class="form-select quantity-select"
+													aria-label="Quantity Select"
+												>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
+													<option value="11">11</option>
+													<option value="12">12</option>
+													<option value="13">13</option>
+													<option value="14">14</option>
+													<option value="15">15</option>
+													<option value="16">16</option>
+													<option value="17">17</option>
+													<option value="18">18</option>
+													<option value="19">19</option>
+													<option value="20">20</option>
+												</select>
+											</div>
+											<p class="cart-item-price">$25</p>
+										</div>
+										<div
+											class="
+												col-4 col-sm-12 col-lg-1
+												d-flex
+												align-items-center
+												remove-btn-container
+											"
+										>
+											<i
+												class="fas fa-times-circle"
+												data-bs-toggle="tooltip"
+												data-bs-placement="top"
+												title="Remove From Cart"
+											></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer border-0 text-uppercase">
+						<div class="container-fluid m-0">
+							<div class="row">
+								<div class="col-12">
+									<div class="row">
+										<div class="col-0 col-sm-3 col-lg-2"></div>
+										<div class="col-0 col-sm-4 col-lg-6"></div>
+										<div class="col-8 col-sm-5 col-lg-3 cart-total-container">
+											<h3 class="cart-total">
+												Total:<span class="cart-total-number">$110</span>
+											</h3>
+										</div>
+										<div class="col-0 col-sm-0 col-lg-1"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button type="submit" class="btn btn-dark text-uppercase">Checkout</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End of Cart Modal -->
 
 		<!-- Start of Video Modals -->
 		<!-- Start of BMTH Modal -->

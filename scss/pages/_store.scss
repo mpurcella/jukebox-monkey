@@ -22,7 +22,7 @@
 				top: 0;
 				left: 0;
 				font-size: 16px;
-				font-family: 'Oxanium', cursive;
+				font-family: 'Montserrat', sans-serif;
 				font-weight: 900;
 				text-transform: uppercase;
 				letter-spacing: 2px;
@@ -51,7 +51,7 @@
 				align-items: center;
 				background-color: #fff;
 				z-index: 5;
-				transition: all 0.3s;
+				transition: all 0.4s ease-in-out;
 			}
 
 			&-item {
