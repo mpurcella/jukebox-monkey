@@ -68,37 +68,45 @@
 					margin-bottom: 80px;
 				}
 
+				.product-artist {
+					display: none;
+				}
+
 				.product-name {
 					font-size: 28px;
 					font-weight: 900;
 					margin-bottom: 30px;
 
-					@media (max-width: 1198px) {
-						font-size: 24px;
+					@media (max-width: 1199px) {
+						font-size: 26px;
 					}
 
 					@media (max-width: 991px) {
-						font-size: 20px;
+						font-size: 24px;
 						margin-bottom: 20px;
 					}
 
 					@media (max-width: 767px) {
-						font-size: 24px;
+						font-size: 28px;
 						text-align: center;
 					}
 
 					@media (max-width: 575px) {
-						font-size: 22px;
+						font-size: 26px;
 					}
 				}
 
+				.product-sku {
+					display: none;
+				}
+
 				.product-subname {
-					font-size: 16px;
-					font-weight: 300;
+					font-size: 18px;
+					font-weight: 200;
 					margin-bottom: 30px;
 
-					@media (max-width: 1198px) {
-						font-size: 15px;
+					@media (max-width: 1199px) {
+						font-size: 16px;
 					}
 
 					@media (max-width: 991px) {
@@ -107,8 +115,12 @@
 					}
 
 					@media (max-width: 767px) {
-						font-size: 15px;
+						font-size: 16px;
 						text-align: center;
+					}
+
+					@media (max-width: 575px) {
+						font-size: 14px;
 					}
 				}
 
@@ -116,7 +128,7 @@
 					font-size: 16px;
 					font-weight: 300;
 
-					@media (max-width: 1198px) {
+					@media (max-width: 1199px) {
 						font-size: 15px;
 					}
 
@@ -126,6 +138,10 @@
 
 					@media (max-width: 767px) {
 						font-size: 15px;
+					}
+
+					@media (max-width: 575px) {
+						font-size: 14px;
 					}
 				}
 			}
@@ -144,7 +160,7 @@
 					text-transform: uppercase;
 					margin-bottom: 18px;
 
-					@media (max-width: 1198px) {
+					@media (max-width: 1199px) {
 						font-size: 16px;
 					}
 
@@ -186,7 +202,7 @@
 					}
 
 					.list-group-item:last-child {
-						@media (max-width: 1198px) {
+						@media (max-width: 1199px) {
 							margin-bottom: 40px;
 						}
 
@@ -204,27 +220,27 @@
 					}
 
 					.list-group-item {
-						font-size: 14px;
-						font-weight: 300;
+						font-size: 16px;
+						font-weight: 200;
 						text-transform: uppercase;
 						border: none;
 						padding: 0;
 
-						@media (max-width: 1198px) {
-							font-size: 13px;
+						@media (max-width: 1199px) {
+							font-size: 15px;
 						}
 
 						@media (max-width: 991px) {
-							font-size: 12px;
+							font-size: 14px;
 						}
 
 						@media (max-width: 767px) {
-							font-size: 13px;
+							font-size: 15px;
 							text-align: center;
 						}
 
-						@media (max-width: 767px) {
-							font-size: 12px;
+						@media (max-width: 575px) {
+							font-size: 14px;
 						}
 					}
 

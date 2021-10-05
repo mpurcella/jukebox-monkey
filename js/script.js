@@ -1,37 +1,6 @@
-// Hamburger Icon & Mobile Menu Animation
-let hamBtn = document.querySelector('.hamburger-icon');
-let mainNav = document.querySelector('.main-nav');
-let darkBg = document.querySelector('.dark-bg');
-let body = document.body;
+/*************** Carousels ***************/
 
-hamBtn.addEventListener('click', () => {
-	hamBtn.classList.toggle('active');
-	mainNav.classList.toggle('active');
-	darkBg.classList.toggle('active');
-	body.classList.toggle('active');
-});
-
-// Featured/Thumbail Image Hover/Change Effect
-let featuredImg = document.querySelector('.featured-img');
-let thumbnailImgs = document.getElementsByClassName('thumbnail-img');
-let activeImgs = document.getElementsByClassName('active');
-
-for (let i = 0; i < thumbnailImgs.length; i++) {
-	thumbnailImgs[i].addEventListener('click', function () {
-		if (activeImgs.length > 0) {
-			activeImgs[0].classList.remove('active');
-		}
-		this.classList.add('active');
-		featuredImg.src = this.src;
-	});
-}
-
-// Cart Total Change
-let cartNum = document.querySelectorAll('.cart-number');
-let addToCartBtn = document.querySelectorAll('.cart-btn');
-let quantitySel = document.getElementsByClassName('.form-select');
-
-// Carousels
+// Carousel Next/Prev Icon
 let previcon = '<i class="fas fa-location-arrow"></i>';
 let nexticon = '<i class="fas fa-location-arrow"></i>';
 
@@ -102,7 +71,265 @@ $('.videos-carousel').owlCarousel({
 	}
 });
 
-// Modal Video Players
+/*************** Hamburger Icon & Mobile Menu Animation ***************/
+
+let hamBtn = document.querySelector('.hamburger-icon');
+let mainNav = document.querySelector('.main-nav');
+let darkBg = document.querySelector('.dark-bg');
+let body = document.body;
+
+hamBtn.addEventListener('click', () => {
+	hamBtn.classList.toggle('active');
+	mainNav.classList.toggle('active');
+	darkBg.classList.toggle('active');
+	body.classList.toggle('active');
+});
+
+/*************** Featured/Thumbail Image Click/Change Effect ***************/
+
+let featuredImg = document.querySelector('.featured-img');
+let thumbnailImgs = document.getElementsByClassName('thumbnail-img');
+let activeImgs = document.getElementsByClassName('active');
+
+for (let i = 0; i < thumbnailImgs.length; i++) {
+	thumbnailImgs[i].addEventListener('click', function () {
+		if (activeImgs.length > 0) {
+			activeImgs[0].classList.remove('active');
+		}
+		this.classList.add('active');
+		featuredImg.src = this.src;
+	});
+}
+
+/*************** Filter Menu ***************/
+
+// Filter Menu Animation
+let filterMenuBtn = document.querySelector('.filter-menu-btn');
+let filterMenuCloseBtn = document.querySelector('.filter-menu-close-btn');
+let accordionContainer = document.querySelector('.accordion-container');
+
+if (filterMenuBtn) {
+	filterMenuBtn.addEventListener('click', () => {
+		accordionContainer.classList.toggle('active');
+		darkBg.classList.toggle('active');
+		body.classList.toggle('active');
+	});
+}
+
+if (filterMenuCloseBtn) {
+	filterMenuCloseBtn.addEventListener('click', () => {
+		accordionContainer.classList.remove('active');
+		darkBg.classList.remove('active');
+		body.classList.remove('active');
+	});
+}
+
+// Adding Artist Selection
+let artistCheckBoxes = document.querySelectorAll('.artist-filter-input');
+
+artistCheckBoxes.forEach((artistBox) => {
+	artistBox.addEventListener('click', () => {
+		if (artistBox.checked === true) {
+			addArtistSelection(artistBox);
+		} else {
+			console.log(artistBox.value + ' Unchecked');
+		}
+	});
+});
+
+let addArtistSelection = (artistBox) => {
+	let artistSelectionContainer = document.querySelector('.artist-selection-container');
+	let artistSelection = document.createElement('p');
+	artistSelection.classList = 'filter-selection artist-selection';
+	artistSelection.innerHTML = `
+					${artistBox.value}
+				`;
+	artistSelectionContainer.appendChild(artistSelection);
+};
+
+// Adding Product Type Selection
+let productTypeCheckBoxes = document.querySelectorAll('.product-type-filter-input');
+
+productTypeCheckBoxes.forEach((productTypeBox) => {
+	productTypeBox.addEventListener('click', () => {
+		if (productTypeBox.checked === true) {
+			addProductTypeSelection(productTypeBox);
+		} else {
+			console.log(productTypeBox.value + ' Unchecked');
+		}
+	});
+});
+
+let addProductTypeSelection = (productTypeBox) => {
+	let productTypeSelectionContainer = document.querySelector('.product-type-selection-container');
+	let productTypeSelection = document.createElement('p');
+	productTypeSelection.classList = 'filter-selection product-type-selection';
+	productTypeSelection.innerHTML = `
+					${productTypeBox.value}
+				`;
+	productTypeSelectionContainer.appendChild(productTypeSelection);
+};
+
+// Adding Color Selection
+let colorCheckBoxes = document.querySelectorAll('.color-filter-input');
+
+colorCheckBoxes.forEach((colorBox) => {
+	colorBox.addEventListener('click', () => {
+		if (colorBox.checked === true) {
+			addColorSelection(colorBox);
+		} else {
+			console.log(colorBox.value + ' Unchecked');
+		}
+	});
+});
+
+let addColorSelection = (colorBox) => {
+	let colorSelectionContainer = document.querySelector('.color-selection-container');
+	let colorSelection = document.createElement('p');
+	colorSelection.classList = 'filter-selection color-selection';
+	colorSelection.innerHTML = `
+					${colorBox.value}
+				`;
+	colorSelectionContainer.appendChild(colorSelection);
+};
+
+/******************** Cart Functionality ********************/
+
+// Updating Cart Total Price
+let updateCartTotal = () => {
+	let total = 0;
+	let cartTotal = document.querySelector('.cart-total-number');
+	let cartItems = document.querySelectorAll('.cart-item');
+	cartItems.forEach((item) => {
+		let cartItemPrice = parseFloat(item.querySelector('.cart-item-price').innerText.replace('$', ''));
+		let cartItemQuantity = item.querySelector('.quantity-input').value;
+		total += cartItemPrice * cartItemQuantity;
+	});
+	cartTotal.innerText = '$' + total;
+};
+
+/********************/
+
+// Adding Items To Cart
+let addToCartClicked = (e) => {
+	let itemContainer = e.target.parentElement.parentElement.parentElement.parentElement;
+	let itemArtist = itemContainer.querySelector('.product-artist').innerText;
+	let itemName = itemContainer.querySelector('.product-name').innerText;
+	let itemSku = itemContainer.querySelector('.product-sku').innerText;
+	let itemDescriptionType = itemContainer.querySelector('.product-subname').innerText;
+	// let itemDescriptionSize = itemContainer.querySelector('.size-select').value;
+	let itemPrice = itemContainer.querySelector('.product-price').innerHTML;
+	let itemQuantity = itemContainer.querySelector('.quantity-select').value;
+	let itemImg = itemContainer.querySelector('.featured-img').src;
+	addItemToCart(itemArtist, itemName, itemSku, itemDescriptionType, itemPrice, itemQuantity, itemImg);
+};
+
+let addItemToCart = (itemArtist, itemName, itemSku, itemDescriptionType, itemPrice, itemQuantity, itemImg) => {
+	let cartItemContainer = document.querySelector('.cart-item-container');
+	let cartItemSkus = cartItemContainer.querySelectorAll('.cart-item-sku');
+	let cartItem = document.createElement('div');
+	cartItem.classList = 'col-12 cart-item';
+
+	cartItemSkus.forEach((sku) => {
+		if (sku.innerText === itemSku) {
+			alert('Item Already Added To Cart');
+			return;
+		}
+	});
+
+	cartItem.innerHTML = `
+		<div class="row">
+			<div class="col-4 col-sm-3 col-lg-2 cart-col item-image-col">
+				<img src="${itemImg}" alt="" />
+			</div>
+			<div class="col-8 col-sm-6 col-lg-6 cart-col item-info-col">
+				<h2 class="cart-item-artist">${itemArtist}</h2>
+				<p class="cart-item-name">${itemName}<span class='cart-item-sku'>${itemSku}<span></p>
+				<p class="cart-item-description">${itemDescriptionType}</p>
+			</div>
+			<div class="col-8 col-sm-3 col-lg-3 cart-col item-quantity-col">
+				<div class="quantity-input-container">
+					<input
+					class="form-control quantity-input"
+					type="number"
+					name="quantity"
+					min="1"
+					max="20"
+					value="${itemQuantity}"
+					/>
+				</div>
+				<p class="cart-item-price">${itemPrice}</p>
+			</div>
+			<div
+				class="
+					col-4 col-sm-12 col-lg-1
+					d-flex
+					align-items-center
+					remove-btn-container
+				"
+			>
+				<i class="fas fa-times-circle remove-btn"></i>
+			</div>
+		</div>`;
+	cartItemContainer.appendChild(cartItem);
+	cartItem.querySelector('.remove-btn').addEventListener('click', removeCartItem);
+	cartItem.querySelector('.quantity-input').addEventListener('change', cartQuantityChange);
+	updateCartTotal();
+	updateCartIconNumber();
+};
+
+let addToCartBtn = document.querySelector('.cart-btn');
+if (addToCartBtn) {
+	addToCartBtn.addEventListener('click', addToCartClicked);
+}
+
+/********************/
+
+// Removing Items From Cart (Function)
+let removeCartItem = (e) => {
+	e.target.parentElement.parentElement.parentElement.remove();
+	updateCartTotal();
+	updateCartIconNumber();
+};
+
+// Removing Items From Cart
+let removeBtn = document.querySelectorAll('.remove-btn');
+removeBtn.forEach((btn) => {
+	btn.addEventListener('click', removeCartItem);
+});
+
+/********************/
+
+// Updating Cart Total after Quantity Change (Function)
+let cartQuantityChange = () => {
+	updateCartTotal();
+	updateCartIconNumber();
+};
+
+// Updating Cart Total after Quantity Change
+let quantityInput = document.querySelectorAll('.quantity-input');
+quantityInput.forEach((input) => {
+	input.addEventListener('change', cartQuantityChange);
+});
+
+/********************/
+
+// Updating Cart Icon Number
+let updateCartIconNumber = () => {
+	let total = 0;
+	let cartIconQuantity = document.querySelector('.cart-quantity');
+	let cartItems = document.querySelectorAll('.cart-item');
+	cartItems.forEach((item) => {
+		let cartItemQuantity = parseInt(item.querySelector('.quantity-input').value);
+		total += cartItemQuantity;
+	});
+	cartIconQuantity.textContent = total;
+};
+
+updateCartIconNumber();
+
+/******************** Modal Video Players ********************/
+
 // TAS
 $('#playTAS').click(function () {
 	$('#modalVideoTAS').modal('show');

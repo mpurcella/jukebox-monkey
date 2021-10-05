@@ -96,7 +96,7 @@ header {
 		.nav-item {
 			&:hover {
 				.fa-shopping-cart,
-				.cart-total {
+				.cart-quantity {
 					color: $tertiary-color;
 					border-color: $tertiary-color;
 				}
@@ -147,9 +147,9 @@ header {
 				transition: all 0.3s;
 			}
 
-			.cart-total {
-				width: 20px;
-				height: 20px;
+			.cart-quantity {
+				width: 24px;
+				height: 24px;
 				font-size: 14px;
 				font-family: 'Montserrat', sans-serif;
 				color: $primary-color;
@@ -162,8 +162,8 @@ header {
 				justify-content: center;
 				align-items: center;
 				position: absolute;
-				top: -5px;
-				right: -5px;
+				top: -8px;
+				right: -8px;
 				transition: all 0.3s;
 
 				@media (max-width: 992px) {

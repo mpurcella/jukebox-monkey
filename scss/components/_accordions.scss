@@ -1,0 +1,86 @@
+.accordion {
+	font-size: 12px;
+	font-weight: 200;
+	text-transform: uppercase;
+
+	.accordion-item {
+		border: none;
+	}
+
+	.accordion-header {
+		.accordion-button {
+			font-weight: 700;
+			text-transform: uppercase;
+			padding: 10px 0;
+		}
+
+		.accordion-button:after {
+			background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='000000'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+		}
+
+		.accordion-button:not(.collapsed) {
+			color: $primary-color;
+		}
+	}
+
+	.accordion-body {
+		margin-bottom: 20px;
+		padding: 0;
+
+		li {
+			font-family: 'Montserrat', sans-serif;
+			margin: 10px 0;
+			display: flex;
+			align-items: center;
+
+			input[type='checkbox'] {
+				filter: grayscale(100%);
+			}
+
+			label {
+				line-height: 1.2;
+				margin-left: 10px;
+			}
+		}
+	}
+}
+
+.artist-accordion,
+.product-accordion {
+	.accordion-item {
+		border-bottom: 1px solid #e0e0e0;
+	}
+}
+
+.artist-accordion {
+	margin-top: 30px;
+
+	.accordion-body {
+		height: 240px;
+		overflow: auto;
+
+		@media (max-width: 992px) {
+			height: 216px;
+		}
+	}
+
+	.accordion-body::-webkit-scrollbar {
+		-webkit-appearance: none;
+	}
+
+	.accordion-body::-webkit-scrollbar:vertical {
+		width: 15px;
+		background-color: #ffffff;
+		border-radius: 10px;
+	}
+
+	.accordion-body::-webkit-scrollbar-thumb {
+		background-color: #707070;
+		border: 2px solid #ffffff;
+		border-radius: 10px;
+	}
+}
+
+.color-accordion {
+	margin-bottom: 40px;
+}

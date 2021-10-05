@@ -1,0 +1,134 @@
+.store-filter-container {
+	.accordion-container {
+		position: relative;
+		transition: left 0.4s ease-in-out;
+
+		&.active {
+			left: 0;
+		}
+
+		@media (max-width: 991px) {
+			width: 50vw;
+			height: calc(100vh - 75px);
+			position: fixed;
+			top: 75px;
+			left: -100%;
+			z-index: 60;
+			background-color: $secondary-color;
+			padding: 0 24px;
+			overflow-y: scroll;
+		}
+
+		@media (max-width: 575px) {
+			width: 80vw;
+		}
+
+		.filter-menu-close-btn {
+			display: none;
+
+			@media (max-width: 992px) {
+				display: flex;
+				justify-content: flex-end;
+				font-size: 20px;
+				color: #e0e0e0;
+				position: absolute;
+				top: 4px;
+				right: 8px;
+				cursor: pointer;
+				transition: all 0.3s;
+
+				&:hover {
+					color: $tertiary-color;
+				}
+			}
+		}
+
+		.filter-selection-container {
+			margin-top: 40px;
+			text-transform: uppercase;
+			display: flex;
+			flex-direction: column;
+
+			&.active {
+				display: flex;
+			}
+
+			.filter-selection-top {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-end;
+				margin-bottom: 20px;
+
+				.filter-header {
+					font-weight: 700;
+				}
+
+				.filter-clear {
+					font-weight: 200;
+					font-size: 12px;
+					cursor: pointer;
+
+					&:hover {
+						color: $tertiary-color;
+					}
+				}
+			}
+
+			.filter-selection-bottom {
+				.filter-category-container {
+					margin-bottom: 20px;
+
+					.filter-category-name {
+						font-size: 12px;
+						font-weight: 700;
+					}
+
+					.filter-selection {
+						font-family: 'Montserrat', sans-serif;
+						font-size: 11px;
+						color: #9b9b9b;
+						display: inline-block;
+						margin-right: 16px;
+						margin-bottom: 12px;
+					}
+				}
+			}
+		}
+	}
+
+	.apparel-container {
+		.store-header {
+			font-size: 18px;
+			font-weight: 200;
+			margin: 40px 0 20px;
+		}
+
+		.filter-btns-container {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 40px;
+
+			.filter-menu-btn {
+				font-size: 14px;
+				font-weight: 200;
+				text-transform: uppercase;
+				border: 1px solid #e0e0e0;
+				margin-right: 24px;
+				display: none;
+
+				@media (max-width: 992px) {
+					display: block;
+				}
+			}
+
+			.sort-by-select {
+				width: 200px;
+				font-size: 14px;
+				font-weight: 200;
+				text-transform: uppercase;
+				border: 1px solid #e0e0e0;
+				text-align: center;
+			}
+		}
+	}
+}
