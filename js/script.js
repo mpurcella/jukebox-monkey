@@ -124,6 +124,18 @@ if (filterMenuCloseBtn) {
 	});
 }
 
+// Mutation Observer
+let target = document.querySelector('.artist-selection-container');
+let observer = new MutationObserver((mutations) => {
+	mutations.forEach((mutation) => {
+		console.log(mutation);
+	});
+});
+
+observer.observe(target, {
+	childList: true
+});
+
 // Adding Artist Selection
 let artistCheckBoxes = document.querySelectorAll('.artist-filter-input');
 
@@ -132,7 +144,6 @@ artistCheckBoxes.forEach((artistBox) => {
 		if (artistBox.checked === true) {
 			addArtistSelection(artistBox);
 		} else {
-			console.log(artistBox.value + ' Unchecked');
 		}
 	});
 });

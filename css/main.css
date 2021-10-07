@@ -3033,7 +3033,7 @@ footer .social-list .nav-link:hover {
 }
 @media (max-width: 575px) {
   .store-filter-container .accordion-container {
-    width: 80vw;
+    width: 100vw;
   }
 }
 .store-filter-container .accordion-container .filter-menu-close-btn {
@@ -3073,28 +3073,28 @@ footer .social-list .nav-link:hover {
 .store-filter-container .accordion-container .filter-selection-container .filter-selection-top .filter-header {
   font-weight: 700;
 }
-.store-filter-container .accordion-container .filter-selection-container .filter-selection-top .filter-clear {
-  font-weight: 200;
-  font-size: 12px;
-  cursor: pointer;
-}
-.store-filter-container .accordion-container .filter-selection-container .filter-selection-top .filter-clear:hover {
-  color: #797979;
-}
-.store-filter-container .accordion-container .filter-selection-container .filter-selection-bottom .filter-category-container {
+.store-filter-container .accordion-container .filter-selection-container .filter-selection-middle .filter-category-container {
   margin-bottom: 20px;
 }
-.store-filter-container .accordion-container .filter-selection-container .filter-selection-bottom .filter-category-container .filter-category-name {
+.store-filter-container .accordion-container .filter-selection-container .filter-selection-middle .filter-category-container .filter-category-name {
   font-size: 12px;
   font-weight: 700;
 }
-.store-filter-container .accordion-container .filter-selection-container .filter-selection-bottom .filter-category-container .filter-selection {
+.store-filter-container .accordion-container .filter-selection-container .filter-selection-middle .filter-category-container .filter-selection {
   font-family: "Montserrat", sans-serif;
   font-size: 11px;
   color: #9b9b9b;
   display: inline-block;
   margin-right: 16px;
   margin-bottom: 12px;
+}
+.store-filter-container .accordion-container .filter-selection-container .filter-selection-bottom .filter-clear {
+  font-weight: 200;
+  font-size: 12px;
+  cursor: pointer;
+}
+.store-filter-container .accordion-container .filter-selection-container .filter-selection-bottom .filter-clear:hover {
+  color: #797979;
 }
 .store-filter-container .apparel-container .store-header {
   font-size: 18px;
