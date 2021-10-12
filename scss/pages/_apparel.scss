@@ -8,7 +8,7 @@
 		}
 
 		@media (max-width: 991px) {
-			width: 50vw;
+			width: 60vw;
 			height: calc(100vh - 75px);
 			position: fixed;
 			top: 75px;
@@ -46,10 +46,10 @@
 		.filter-selection-container {
 			margin-top: 40px;
 			text-transform: uppercase;
-			display: flex;
+			display: none;
 			flex-direction: column;
 
-			&.active {
+			&.show {
 				display: flex;
 			}
 

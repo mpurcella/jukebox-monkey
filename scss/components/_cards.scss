@@ -517,6 +517,10 @@
 		}
 	}
 
+	&.hide {
+		display: none;
+	}
+
 	.card-body {
 		top: 275px;
 

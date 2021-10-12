@@ -108,42 +108,40 @@ let filterMenuBtn = document.querySelector('.filter-menu-btn');
 let filterMenuCloseBtn = document.querySelector('.filter-menu-close-btn');
 let accordionContainer = document.querySelector('.accordion-container');
 
-if (filterMenuBtn) {
-	filterMenuBtn.addEventListener('click', () => {
-		accordionContainer.classList.toggle('active');
-		darkBg.classList.toggle('active');
-		body.classList.toggle('active');
-	});
-}
+let openFilterMenu = () => {
+	if (filterMenuBtn) {
+		filterMenuBtn.addEventListener('click', () => {
+			accordionContainer.classList.toggle('active');
+			darkBg.classList.toggle('active');
+			body.classList.toggle('active');
+		});
+	}
+};
 
-if (filterMenuCloseBtn) {
-	filterMenuCloseBtn.addEventListener('click', () => {
-		accordionContainer.classList.remove('active');
-		darkBg.classList.remove('active');
-		body.classList.remove('active');
-	});
-}
+openFilterMenu();
 
-// Mutation Observer
-let target = document.querySelector('.artist-selection-container');
-let observer = new MutationObserver((mutations) => {
-	mutations.forEach((mutation) => {
-		console.log(mutation);
-	});
-});
+let closeFilterMenu = () => {
+	if (filterMenuCloseBtn) {
+		filterMenuCloseBtn.addEventListener('click', () => {
+			accordionContainer.classList.toggle('active');
+			darkBg.classList.toggle('active');
+			body.classList.toggle('active');
+		});
+	}
+};
 
-observer.observe(target, {
-	childList: true
-});
+closeFilterMenu();
 
 // Adding Artist Selection
 let artistCheckBoxes = document.querySelectorAll('.artist-filter-input');
+let artistProductCards = document.querySelectorAll('.store-card');
 
 artistCheckBoxes.forEach((artistBox) => {
 	artistBox.addEventListener('click', () => {
 		if (artistBox.checked === true) {
 			addArtistSelection(artistBox);
-		} else {
+		} else if (artistBox.checked === false) {
+			document.getElementById(`${artistBox.value.toLowerCase().replace(/ /g, '-')}-selection`).remove();
 		}
 	});
 });
@@ -152,6 +150,7 @@ let addArtistSelection = (artistBox) => {
 	let artistSelectionContainer = document.querySelector('.artist-selection-container');
 	let artistSelection = document.createElement('p');
 	artistSelection.classList = 'filter-selection artist-selection';
+	artistSelection.id = `${artistBox.value.toLowerCase().replace(/ /g, '-')}-selection`;
 	artistSelection.innerHTML = `
 					${artistBox.value}
 				`;
@@ -165,8 +164,8 @@ productTypeCheckBoxes.forEach((productTypeBox) => {
 	productTypeBox.addEventListener('click', () => {
 		if (productTypeBox.checked === true) {
 			addProductTypeSelection(productTypeBox);
-		} else {
-			console.log(productTypeBox.value + ' Unchecked');
+		} else if (productTypeBox.checked === false) {
+			document.getElementById(`${productTypeBox.value}-selection`).remove();
 		}
 	});
 });
@@ -175,6 +174,7 @@ let addProductTypeSelection = (productTypeBox) => {
 	let productTypeSelectionContainer = document.querySelector('.product-type-selection-container');
 	let productTypeSelection = document.createElement('p');
 	productTypeSelection.classList = 'filter-selection product-type-selection';
+	productTypeSelection.id = `${productTypeBox.value}-selection`;
 	productTypeSelection.innerHTML = `
 					${productTypeBox.value}
 				`;
@@ -188,8 +188,8 @@ colorCheckBoxes.forEach((colorBox) => {
 	colorBox.addEventListener('click', () => {
 		if (colorBox.checked === true) {
 			addColorSelection(colorBox);
-		} else {
-			console.log(colorBox.value + ' Unchecked');
+		} else if (colorBox.checked === false) {
+			document.getElementById(`${colorBox.value}-selection`).remove();
 		}
 	});
 });
@@ -198,12 +198,48 @@ let addColorSelection = (colorBox) => {
 	let colorSelectionContainer = document.querySelector('.color-selection-container');
 	let colorSelection = document.createElement('p');
 	colorSelection.classList = 'filter-selection color-selection';
+	colorSelection.id = `${colorBox.value}-selection`;
 	colorSelection.innerHTML = `
 					${colorBox.value}
 				`;
 	colorSelectionContainer.appendChild(colorSelection);
 };
 
+// Showing Filter Menu
+let showFilterMenu = () => {
+	let filterContainer = document.querySelector('.filter-selection-container');
+	let filterCheckBoxes = document.querySelectorAll('.filter-input');
+	filterCheckBoxes.forEach((checkBox) => {
+		checkBox.addEventListener('click', () => {
+			if (checkBox.checked === true) {
+				filterContainer.classList.add('show');
+			} else {
+			}
+		});
+	});
+};
+
+// Removing All Filter Selections
+let removeSelections = () => {
+	let removeFilters = document.querySelector('.filter-clear');
+	if (removeFilters) {
+		removeFilters.addEventListener('click', () => {
+			let filterSelections = document.querySelectorAll('.filter-selection');
+			let filterCheckBoxes = document.querySelectorAll('.filter-input');
+			let filterContainer = document.querySelector('.filter-selection-container');
+			filterSelections.forEach((filter) => {
+				filter.remove();
+			});
+			filterCheckBoxes.forEach((checkBox) => {
+				checkBox.checked = false;
+			});
+			filterContainer.classList.remove('show');
+		});
+	}
+};
+
+showFilterMenu();
+removeSelections();
 /******************** Cart Functionality ********************/
 
 // Updating Cart Total Price
@@ -222,8 +258,8 @@ let updateCartTotal = () => {
 /********************/
 
 // Adding Items To Cart
-let addToCartClicked = (e) => {
-	let itemContainer = e.target.parentElement.parentElement.parentElement.parentElement;
+let addToCartClicked = () => {
+	let itemContainer = document.querySelector('.product-container');
 	let itemArtist = itemContainer.querySelector('.product-artist').innerText;
 	let itemName = itemContainer.querySelector('.product-name').innerText;
 	let itemSku = itemContainer.querySelector('.product-sku').innerText;
@@ -232,21 +268,39 @@ let addToCartClicked = (e) => {
 	let itemPrice = itemContainer.querySelector('.product-price').innerHTML;
 	let itemQuantity = itemContainer.querySelector('.quantity-select').value;
 	let itemImg = itemContainer.querySelector('.featured-img').src;
-	addItemToCart(itemArtist, itemName, itemSku, itemDescriptionType, itemPrice, itemQuantity, itemImg);
+	addItemToCart(
+		itemArtist,
+		itemName,
+		itemSku,
+		itemDescriptionType,
+		// itemDescriptionSize,
+		itemPrice,
+		itemQuantity,
+		itemImg
+	);
 };
 
-let addItemToCart = (itemArtist, itemName, itemSku, itemDescriptionType, itemPrice, itemQuantity, itemImg) => {
+let addItemToCart = (
+	itemArtist,
+	itemName,
+	itemSku,
+	itemDescriptionType,
+	// itemDescriptionSize,
+	itemPrice,
+	itemQuantity,
+	itemImg
+) => {
 	let cartItemContainer = document.querySelector('.cart-item-container');
 	let cartItemSkus = cartItemContainer.querySelectorAll('.cart-item-sku');
 	let cartItem = document.createElement('div');
 	cartItem.classList = 'col-12 cart-item';
 
-	cartItemSkus.forEach((sku) => {
-		if (sku.innerText === itemSku) {
+	for (let i = 0; i < cartItemSkus.length; i++) {
+		if (cartItemSkus[i].innerText === itemSku) {
 			alert('Item Already Added To Cart');
 			return;
 		}
-	});
+	}
 
 	cartItem.innerHTML = `
 		<div class="row">

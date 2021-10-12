@@ -889,6 +889,9 @@ table {
     margin-bottom: 40px;
   }
 }
+.store-card.hide {
+  display: none;
+}
 .store-card .card-body {
   top: 275px;
 }
@@ -3020,7 +3023,7 @@ footer .social-list .nav-link:hover {
 }
 @media (max-width: 991px) {
   .store-filter-container .accordion-container {
-    width: 50vw;
+    width: 60vw;
     height: calc(100vh - 75px);
     position: fixed;
     top: 75px;
@@ -3058,10 +3061,10 @@ footer .social-list .nav-link:hover {
 .store-filter-container .accordion-container .filter-selection-container {
   margin-top: 40px;
   text-transform: uppercase;
-  display: flex;
+  display: none;
   flex-direction: column;
 }
-.store-filter-container .accordion-container .filter-selection-container.active {
+.store-filter-container .accordion-container .filter-selection-container.show {
   display: flex;
 }
 .store-filter-container .accordion-container .filter-selection-container .filter-selection-top {
