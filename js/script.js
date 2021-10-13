@@ -262,36 +262,14 @@ let addToCartClicked = () => {
 	let itemArtist = document.querySelector('.product-artist').innerText;
 	let itemName = document.querySelector('.product-name').innerText;
 	let itemSku = document.querySelector('.product-sku').innerText;
-	// let itemDescriptionType = document.querySelector('.product-subname').innerText;
-	// let itemDescriptionSize = document.querySelector('.size-select').value;
 	let itemDescription;
 	let itemPrice = document.querySelector('.product-price').innerHTML;
 	let itemQuantity = document.querySelector('.quantity-select').value;
 	let itemImg = document.querySelector('.featured-img').src;
-	addItemToCart(
-		itemArtist,
-		itemName,
-		itemSku,
-		// itemDescriptionType,
-		// itemDescriptionSize,
-		itemDescription,
-		itemPrice,
-		itemQuantity,
-		itemImg
-	);
+	addItemToCart(itemArtist, itemName, itemSku, itemDescription, itemPrice, itemQuantity, itemImg);
 };
 
-let addItemToCart = (
-	itemArtist,
-	itemName,
-	itemSku,
-	// itemDescriptionType,
-	// itemDescriptionSize,
-	itemDescription,
-	itemPrice,
-	itemQuantity,
-	itemImg
-) => {
+let addItemToCart = (itemArtist, itemName, itemSku, itemDescription, itemPrice, itemQuantity, itemImg) => {
 	let cartForm = document.querySelector('.cart-form');
 	let cartItemContainer = document.querySelector('.cart-item-container');
 	let cartItemSkus = cartItemContainer.querySelectorAll('.cart-item-sku');
@@ -303,6 +281,11 @@ let addItemToCart = (
 			alert('Item Already Added To Cart');
 			return;
 		}
+	}
+
+	if (itemDescription === 'Select a Size') {
+		alert('Please Select A Size');
+		return;
 	}
 
 	if (cartForm.firstElementChild.classList == 'form-top') {
@@ -350,6 +333,7 @@ let addItemToCart = (
 	cartItem.querySelector('.quantity-input').addEventListener('change', cartQuantityChange);
 	updateCartTotal();
 	updateCartIconNumber();
+	addedToCartPopup();
 };
 
 let addToCartBtn = document.querySelector('.cart-btn');
@@ -357,8 +341,33 @@ if (addToCartBtn) {
 	addToCartBtn.addEventListener('click', addToCartClicked);
 }
 
-let cartForm = document.querySelector('.cart-form');
-console.log(cartForm);
+/********************/
+
+// Added Cart Item Popup
+let addedToCartPopup = () => {
+	let addedCartItemPopup = document.querySelector('.added-cart-item-popup-container');
+	let itemArtist = document.querySelector('.product-artist').innerText;
+	let itemName = document.querySelector('.product-name').innerText;
+	let itemDescription;
+	let cartForm = document.querySelector('.cart-form');
+
+	if (cartForm.firstElementChild.classList == 'form-top') {
+		itemDescription = document.querySelector('.size-select').value;
+	} else {
+		itemDescription = document.querySelector('.product-subname').innerText;
+	}
+
+	addedCartItemPopup.innerHTML = `
+			<p class="added-cart-item-popup-container-text">
+				${itemArtist} - ${itemName} - ${itemDescription} - Has been added to your cart
+			</p>
+		`;
+
+	addedCartItemPopup.classList.add('show');
+	setTimeout(() => {
+		addedCartItemPopup.classList.remove('show');
+	}, 6000);
+};
 
 /********************/
 
