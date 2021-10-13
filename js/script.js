@@ -259,21 +259,22 @@ let updateCartTotal = () => {
 
 // Adding Items To Cart
 let addToCartClicked = () => {
-	let itemContainer = document.querySelector('.product-container');
-	let itemArtist = itemContainer.querySelector('.product-artist').innerText;
-	let itemName = itemContainer.querySelector('.product-name').innerText;
-	let itemSku = itemContainer.querySelector('.product-sku').innerText;
-	let itemDescriptionType = itemContainer.querySelector('.product-subname').innerText;
-	// let itemDescriptionSize = itemContainer.querySelector('.size-select').value;
-	let itemPrice = itemContainer.querySelector('.product-price').innerHTML;
-	let itemQuantity = itemContainer.querySelector('.quantity-select').value;
-	let itemImg = itemContainer.querySelector('.featured-img').src;
+	let itemArtist = document.querySelector('.product-artist').innerText;
+	let itemName = document.querySelector('.product-name').innerText;
+	let itemSku = document.querySelector('.product-sku').innerText;
+	// let itemDescriptionType = document.querySelector('.product-subname').innerText;
+	// let itemDescriptionSize = document.querySelector('.size-select').value;
+	let itemDescription;
+	let itemPrice = document.querySelector('.product-price').innerHTML;
+	let itemQuantity = document.querySelector('.quantity-select').value;
+	let itemImg = document.querySelector('.featured-img').src;
 	addItemToCart(
 		itemArtist,
 		itemName,
 		itemSku,
-		itemDescriptionType,
+		// itemDescriptionType,
 		// itemDescriptionSize,
+		itemDescription,
 		itemPrice,
 		itemQuantity,
 		itemImg
@@ -284,12 +285,14 @@ let addItemToCart = (
 	itemArtist,
 	itemName,
 	itemSku,
-	itemDescriptionType,
+	// itemDescriptionType,
 	// itemDescriptionSize,
+	itemDescription,
 	itemPrice,
 	itemQuantity,
 	itemImg
 ) => {
+	let cartForm = document.querySelector('.cart-form');
 	let cartItemContainer = document.querySelector('.cart-item-container');
 	let cartItemSkus = cartItemContainer.querySelectorAll('.cart-item-sku');
 	let cartItem = document.createElement('div');
@@ -302,6 +305,12 @@ let addItemToCart = (
 		}
 	}
 
+	if (cartForm.firstElementChild.classList == 'form-top') {
+		itemDescription = document.querySelector('.size-select').value;
+	} else {
+		itemDescription = document.querySelector('.product-subname').innerText;
+	}
+
 	cartItem.innerHTML = `
 		<div class="row">
 			<div class="col-4 col-sm-3 col-lg-2 cart-col item-image-col">
@@ -310,7 +319,7 @@ let addItemToCart = (
 			<div class="col-8 col-sm-6 col-lg-6 cart-col item-info-col">
 				<h2 class="cart-item-artist">${itemArtist}</h2>
 				<p class="cart-item-name">${itemName}<span class='cart-item-sku'>${itemSku}<span></p>
-				<p class="cart-item-description">${itemDescriptionType}</p>
+				<p class="cart-item-description">${itemDescription}</p>
 			</div>
 			<div class="col-8 col-sm-3 col-lg-3 cart-col item-quantity-col">
 				<div class="quantity-input-container">
@@ -347,6 +356,9 @@ let addToCartBtn = document.querySelector('.cart-btn');
 if (addToCartBtn) {
 	addToCartBtn.addEventListener('click', addToCartClicked);
 }
+
+let cartForm = document.querySelector('.cart-form');
+console.log(cartForm);
 
 /********************/
 
