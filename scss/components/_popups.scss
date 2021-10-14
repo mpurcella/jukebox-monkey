@@ -19,5 +19,22 @@
 		font-weight: 200;
 		text-transform: uppercase;
 		text-align: center;
+		line-height: 1.5;
+
+		@media (max-width: 1198px) {
+			font-size: 13px;
+		}
+
+		@media (max-width: 991px) {
+			font-size: 12px;
+		}
+
+		@media (max-width: 767px) {
+			font-size: 11px;
+		}
+
+		@media (max-width: 575px) {
+			font-size: 10px;
+		}
 	}
 }

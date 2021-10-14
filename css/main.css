@@ -1921,12 +1921,22 @@ table {
   flex-direction: column;
   flex-wrap: wrap;
 }
+@media (max-width: 992px) {
+  .dropdown-li .artist-dropdown {
+    display: none;
+  }
+}
 .dropdown-li .artist-dropdown .dropdown-item {
   width: 20%;
 }
 .dropdown-li .store-dropdown {
   top: -257px;
   display: flex;
+}
+@media (max-width: 992px) {
+  .dropdown-li .store-dropdown {
+    display: none;
+  }
 }
 .dropdown-li .store-dropdown .dropdown-column {
   width: 20%;
@@ -2427,6 +2437,27 @@ table {
   font-weight: 200;
   text-transform: uppercase;
   text-align: center;
+  line-height: 1.5;
+}
+@media (max-width: 1198px) {
+  .added-cart-item-popup-container-text {
+    font-size: 13px;
+  }
+}
+@media (max-width: 991px) {
+  .added-cart-item-popup-container-text {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .added-cart-item-popup-container-text {
+    font-size: 11px;
+  }
+}
+@media (max-width: 575px) {
+  .added-cart-item-popup-container-text {
+    font-size: 10px;
+  }
 }
 
 .search-container {
