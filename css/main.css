@@ -2528,7 +2528,6 @@ table {
     left: 36px;
     width: 18px;
     height: 30px;
-    z-index: 1;
   }
 }
 .search-container .submit-btn .search-form-icon {
@@ -2545,21 +2544,20 @@ table {
   height: 20px;
   padding: 0 8px;
   background-color: #fff;
+  transition: all 0.3s;
+}
+.search-container .submit-btn .search-form-icon:hover {
+  color: #797979;
+  cursor: pointer;
 }
 @media (max-width: 992px) {
   .search-container .submit-btn .search-form-icon {
     width: initial;
     height: 100%;
-    justify-content: unset;
     right: unset;
     left: 0;
     padding: unset;
-    background-color: #fff;
-    z-index: 5;
   }
-}
-.search-container .submit-btn .search-form-icon:hover {
-  cursor: pointer;
 }
 
 @media (max-width: 992px) {
