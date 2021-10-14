@@ -2528,6 +2528,7 @@ table {
     left: 36px;
     width: 18px;
     height: 30px;
+    z-index: 1;
   }
 }
 .search-container .submit-btn .search-form-icon {
@@ -2554,6 +2555,7 @@ table {
     left: 0;
     padding: unset;
     background-color: #fff;
+    z-index: 5;
   }
 }
 .search-container .submit-btn .search-form-icon:hover {
