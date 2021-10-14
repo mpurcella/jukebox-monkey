@@ -283,15 +283,15 @@ let addItemToCart = (itemArtist, itemName, itemSku, itemDescription, itemPrice, 
 		}
 	}
 
-	if (itemDescription === 'Select a Size') {
-		alert('Please Select A Size');
-		return;
-	}
-
 	if (cartForm.firstElementChild.classList == 'form-top') {
 		itemDescription = document.querySelector('.size-select').value;
 	} else {
 		itemDescription = document.querySelector('.product-subname').innerText;
+	}
+
+	if (itemDescription === 'Select a Size') {
+		alert('Please Select A Size');
+		return;
 	}
 
 	cartItem.innerHTML = `
