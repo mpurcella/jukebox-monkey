@@ -213,7 +213,6 @@ let showFilterMenu = () => {
 		checkBox.addEventListener('click', () => {
 			if (checkBox.checked === true) {
 				filterContainer.classList.add('show');
-			} else {
 			}
 		});
 	});
@@ -290,7 +289,7 @@ let addItemToCart = (itemArtist, itemName, itemSku, itemDescription, itemPrice, 
 	}
 
 	if (itemDescription === 'Select a Size') {
-		alert('Please Select A Size');
+		alert('Please Select a Size');
 		return;
 	}
 
