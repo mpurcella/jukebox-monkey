@@ -2831,11 +2831,6 @@ header .nav-list .nav-link {
   font-weight: 200;
   transition: all 0.3s;
 }
-header .nav-list .nav-link.active {
-  text-decoration: underline;
-  text-decoration-color: rgba(0, 0, 0, 0.4);
-  text-underline-offset: 2px;
-}
 header .nav-list .nav-link:hover {
   color: rgb(121, 121, 121);
 }
