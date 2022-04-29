@@ -28,6 +28,12 @@ header {
 			font-weight: 200;
 			transition: all 0.3s;
 
+			&.active {
+				text-decoration: underline;
+				text-decoration-color: rgba($primary-color, 0.4);
+				text-underline-offset: 2px;
+			}
+
 			&:hover {
 				color: $tertiary-color;
 			}
